@@ -1,0 +1,446 @@
+// Kupa Rashit (קופה ראשית) Questions - Israeli Supermarket Sitcom
+// Version 2.0 Game Pack with 50 questions and 20 punishments
+
+export const kuparashitQuestions = [
+    // EASY QUESTIONS (Difficulty 1) - 17 questions
+    {
+        category: "דמויות",
+        question: "מה שמה של הקופאית הראשית?",
+        options: ["כוכבה", "רמי", "דינה", "מוטי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "סופר",
+        question: "איך קוראים לסופרמרקט?",
+        options: ["קופה ראשית", "מכולת ראשית", "שוק ראשי", "סופר ישראלי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מה התפקיד של רמי?",
+        options: ["מנהל", "קופאי", "אחראי ירקות", "שומר"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "כללי",
+        question: "איפה מתרחשת הסדרה?",
+        options: ["סופרמרקט", "מסעדה", "בנק", "משרד"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי האיש עם המשקפיים?",
+        options: ["מוטי", "רמי", "דודו", "שלומי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה הסגנון של הסדרה?",
+        options: ["ציני", "רומנטי", "דרמטי", "פנטסיה"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "איזו דמות היא הכי עצבנית?",
+        options: ["כוכבה", "רמי", "דינה", "מוטי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "כללי",
+        question: "באיזו שנה הסדרה התחילה?",
+        options: ["2014", "2012", "2016", "2010"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי הכי חביב מבין העובדים?",
+        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "כללי",
+        question: "מה סוג הלקוחות בסדרה?",
+        options: ["משעממים ומעצבנים", "חמודים", "עשירים", "זקנים"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה הכי שנוא על כוכבה?",
+        options: ["לקוחות", "עבודה", "רמי", "הכל"],
+        correctIndex: 3,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי האופטימי ביותר?",
+        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "כללי",
+        question: "כמה עונות יש לסדרה?",
+        options: ["3+", "1", "2", "5"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי תמיד מתלונן?",
+        options: ["רמי", "כוכבה", "דודו", "מוטי"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה הקטע החוזר בסדרה?",
+        options: ["לקוחות מטומטמים", "אהבה", "פשע", "הרפתקאות"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "כללי",
+        question: "איזה ז'אנר הסדרה?",
+        options: ["קומדיה", "דרמה", "מתח", "פנטסיה"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי הכי רגוע?",
+        options: ["דודו", "כוכבה", "רמי", "אף אחד"],
+        correctIndex: 0,
+        difficulty: 1,
+        timeLimit: 20
+    },
+
+    // MEDIUM QUESTIONS (Difficulty 2) - 17 questions
+    {
+        category: "עלילה",
+        question: "מה קורה כשלקוח מעצבן מגיע?",
+        options: ["כוכבה מתפוצצת", "רמי מתעלם", "דודו מחייך", "מוטי בורח"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מה הקשר בין כוכבה לרמי?",
+        options: ["עמיתים לעבודה", "חברים", "זוג", "אחים"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה המשפט האהוב של כוכבה?",
+        options: ["מה אתה רוצה?!", "בוקר טוב", "תודה רבה", "איזה יופי"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "עלילה",
+        question: "מה רמי תמיד מנסה לעשות?",
+        options: ["לחסוך כסף", "להרוויח יותר", "למכור", "לברוח"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי האחראי על הירקות?",
+        options: ["דינה", "דודו", "מוטי", "רמי"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "למה הלקוחות תמיד מתלוננים?",
+        options: ["על הכל", "על מחירים", "על שירות", "על איכות"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "עלילה",
+        question: "מה קורה כשיש ביקורת בסופר?",
+        options: ["כולם מתחפשים", "כולם בורחים", "סוגרים", "שמחים"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מה המאפיין של מוטי?",
+        options: ["משקפיים ושקט", "צעקות", "צחוק", "בכי"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "איך כוכבה מתייחסת ללקוחות?",
+        options: ["בזלזול", "באהבה", "בכבוד", "במקצועיות"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "עלילה",
+        question: "מה הכי מעצבן את רמי?",
+        options: ["הוצאות", "עובדים", "לקוחות", "בעלים"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי תמיד מנסה לעזור?",
+        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה הסיטואציה החוזרת?",
+        options: ["לקוח טיפש", "שוד", "אהבה", "מסיבה"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "עלילה",
+        question: "מה קורה כשמישהו רוצה להחזיר מוצר?",
+        options: ["כוכבה מסרבת", "רמי שמח", "מוטי עוזר", "דודו מתלונן"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מה התכונה של דודו?",
+        options: ["נחמד ותמים", "ציני", "עצבני", "חכם"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "הומור",
+        question: "מה הבדיחה החוזרת?",
+        options: ["אין מזל בחיים", "הכל טוב", "אהבה", "חלומות"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "עלילה",
+        question: "מה קורה בסוף רוב הפרקים?",
+        options: ["כולם עייפים", "מסיבה", "פיטורים", "קידום"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+    {
+        category: "דמויות",
+        question: "מי הכי לא אוהב את העבודה?",
+        options: ["כוכבה", "דודו", "מוטי", "דינה"],
+        correctIndex: 0,
+        difficulty: 2,
+        timeLimit: 20
+    },
+
+    // HARD QUESTIONS (Difficulty 3) - 16 questions
+    {
+        category: "טריוויה",
+        question: "באיזו ערוץ הסדרה שודרה?",
+        options: ["HOT", "כאן 11", "ערוץ 12", "נטפליקס"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "עלילה",
+        question: "מה הסכסוך המרכזי בסדרה?",
+        options: ["חיי היומיום המעצבנים", "אהבה", "כסף", "משפחה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "דמויות",
+        question: "מי כתב את הסדרה?",
+        options: ["אסי כהן", "גל זייד", "עדי אלשיך", "לא ידוע"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "הומור",
+        question: "מה הציניות בסדרה מייצגת?",
+        options: ["חיים ישראליים", "אהבה", "עושר", "חלומות"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "עלילה",
+        question: "מה קורה כשהסופר כמעט נסגר?",
+        options: ["כולם נלחמים להציל", "שמחים", "עוזבים", "קונים מתחרה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "דמויות",
+        question: "מי השחקנית שמגלמת את כוכבה?",
+        options: ["מסתתר בחידה", "לא ידוע", "ידוע", "סוד"],
+        correctIndex: 1,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "טריוויה",
+        question: "כמה עובדים יש בסופר?",
+        options: ["משתנה", "5", "10", "3"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "הומור",
+        question: "מה המסר המרכזי?",
+        options: ["החיים קשים אבל ממשיכים", "אהבה", "כסף", "הצלחה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "עלילה",
+        question: "מה הדרמה הגדולה בעונה 2?",
+        options: ["לקוח מטורף", "אהבה", "פיטורים", "שריפה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "דמויות",
+        question: "מי מהדמויות הכי מציאותית?",
+        options: ["כוכבה", "דודו", "רמי", "מוטי"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "טריוויה",
+        question: "איזה קהל אוהב את הסדרה?",
+        options: ["מבוגרים", "ילדים", "זקנים", "תיירים"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "הומור",
+        question: "מה הסטיגמה שהסדרה שוברת?",
+        options: ["עבודה בשירות", "עושר", "יופי", "הצלחה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "עלילה",
+        question: "מה קורה כשרמי מנסה פרסום?",
+        options: ["כישלון", "הצלחה", "שריפה", "עזיבה"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "דמויות",
+        question: "מי הדמות הכי פחות מפותחת?",
+        options: ["מוטי", "כוכבה", "רמי", "דודו"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "טריוויה",
+        question: "האם יש עונה 4?",
+        options: ["תלוי בשנה", "כן", "לא", "מבוטל"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    },
+    {
+        category: "הומור",
+        question: "מה הציטוט המפורסם ביותר?",
+        options: ["מה אתה רוצה?!", "שלום", "תודה", "להתראות"],
+        correctIndex: 0,
+        difficulty: 3,
+        timeLimit: 25
+    }
+];
+
+export const kuparashitPunishments = [
+    { text: "תדבר כמו כוכבה עצבנית למשך 30 שניות", duration: 30 },
+    { text: "תצעק 'מה אתה רוצה?!' 3 פעמים", duration: 15 },
+    { text: "תעמוד כמו קופאית נמאסת למשך 20 שניות", duration: 20 },
+    { text: "תתן שירות לקוחות גרוע לשחקן אחר", duration: 30 },
+    { text: "תספר למה אתה שונא את העבודה שלך", duration: 30 },
+    { text: "תעמיד פנים שאתה סורק מוצרים מהר מאוד", duration: 20 },
+    { text: "תתלונן כמו רמי על הוצאות", duration: 25 },
+    { text: "תעשה חיקוי של לקוח מעצבן", duration: 30 },
+    { text: "תספר בדיחה ציניתעל חיים", duration: 20 },
+    { text: "תדבר במבטא ישראלי מוגזם", duration: 30 },
+    { text: "תנסה למכור משהו מטופש לשחקן", duration: 30 },
+    { text: "תעשה פרצוף של 'נמאס לי מהחיים'", duration: 15 },
+    { text: "תצעק על לקוח דמיוני", duration: 20 },
+    { text: "תספר על היום הכי גרוע בעבודה (אמיתי או בדוי)", duration: 35 },
+    { text: "תנסה להחזיר מוצר דמיוני בצורה מעצבנת", duration: 30 },
+    { text: "תעשה חיקוי של דודו הנחמד", duration: 20 },
+    { text: "תתלונן על משכורת במשך 20 שניות", duration: 20 },
+    { text: "תדבר בסלנג ישראלי מוגזם", duration: 25 },
+    { text: "תעמיד פנים שאתה סוגר את הסופר", duration: 15 },
+    { text: "תגיד 'אין לי כוח' 5 פעמים בדרמטיות", duration: 15 }
+];
+
+export const kuparashitPack = {
+    id: "kupa_rashit",
+    title: { en: "Kupa Rashit", he: "קופה ראשית" },
+    metadata: {
+        themeColor: "#FF6B35",
+        icon: "🛒",
+        bgImage: "/assets/kuparashit_bg.png"
+    },
+    questions: kuparashitQuestions,
+    punishments: kuparashitPunishments,
+    version: "2.0"
+};
