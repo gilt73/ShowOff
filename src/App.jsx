@@ -17,7 +17,7 @@ function Home() {
     const t = (key) => uiText[lang][key];
 
     return (
-        <div className="min-h-screen flex flex-col items-center p-4 relative overflow-hidden text-white">
+        <div className="min-h-screen flex flex-col items-center p-4 relative overflow-y-auto text-white">
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
                 <img src="/assets/bg.png" alt="Background" className="w-full h-full object-cover opacity-80" />
@@ -84,7 +84,7 @@ function Home() {
                                 {Object.values(gamePacks).map((pack) => (
                                     <Link
                                         key={pack.id}
-                                        to={`/ host ? pack = ${pack.id}& lang=${lang}& mode=${gameMode} `}
+                                        to={`/host?pack=${pack.id}&lang=${lang}&mode=${gameMode}`}
                                         className="flex-shrink-0 snap-center cursor-pointer transition-all duration-300 w-28 h-28 rounded-full bg-cover bg-center border-4 border-white/20 hover:border-showoff-accent hover:scale-110"
                                         style={{ backgroundImage: `url(${pack.metadata?.bgImage || pack.bgImage})` }}
                                     >
@@ -102,7 +102,7 @@ function Home() {
 
                 {/* Debug Mode Button */}
                 <div className="mt-8">
-                    <Link to={`/ debug ? pack = ${selectedPack}& lang=${lang} `}>
+                    <Link to={`/debug?pack=${selectedPack}&lang=${lang}`}>
                         <button className="w-64 text-xl h-16 bg-yellow-500 text-black font-black rounded-2xl border-b-4 border-yellow-700 hover:scale-105 hover:bg-yellow-400 transform transition duration-200 shadow-xl flex items-center justify-center gap-3 mx-auto">
                             <span className="text-2xl">🕵️</span>
                             <span>Debug Mode</span>

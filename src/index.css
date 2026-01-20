@@ -26,7 +26,7 @@
 
 @layer base {
     body {
-        @apply bg-showoff-bg text-white overflow-hidden;
+        @apply bg-showoff-bg text-white overflow-auto;
     }
 }
 
@@ -50,7 +50,7 @@
     /* New Player UI Components */
     .btn-answer {
         @apply relative overflow-hidden rounded-2xl font-black text-4xl shadow-lg border text-white transition-all transform active:scale-95 flex items-center justify-center h-24 backdrop-blur-sm;
-        text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     }
 
     .btn-answer-a {

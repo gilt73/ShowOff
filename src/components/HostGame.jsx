@@ -4,6 +4,7 @@ import { ref, set, onValue, update } from "firebase/database";
 import { useSearchParams } from 'react-router-dom';
 import { db } from '../firebaseConfig';
 import { gamePacks, uiText, shuffleArray, selectDifficultyBasedQuestions } from '../questions';
+import { analytics } from '../utils/analytics';
 
 export default function HostGame() {
     const [searchParams] = useSearchParams();
@@ -144,6 +145,9 @@ export default function HostGame() {
         const rounds = currentPack.version === "2.0" ? Math.min(15, shuffled.length) : Math.min(totalRounds, shuffled.length);
         setTotalRounds(rounds);
 
+        // Start analytics tracking
+        analytics.startSession(packId, roomCode, gameMode);
+
         // Store shuffled question IDs in Firebase for players
         const firstQ = shuffled[0];
         update(ref(db, `rooms/${roomCode}`), {
@@ -177,10 +181,18 @@ export default function HostGame() {
 
         const nextIdx = cIndex + 1;
 
+        // Track question progress
+        analytics.updatePlayerCount(Object.keys(players).length);
+        analytics.trackQuestion(cIndex, totalRounds);
+
         // Check if game is over - use totalRounds as the limit
         if (nextIdx >= totalRounds) {
             setGameState("GAME_OVER");
             update(ref(db, `rooms/${roomCode}`), { gameState: "GAME_OVER" });
+
+            // End analytics session
+            const metrics = analytics.endSession();
+            console.log('📊 Game completed:', metrics);
             return;
         }
 
@@ -648,7 +660,7 @@ export default function HostGame() {
                     <img src="/assets/GT_Logo_New.png" alt="G.T AI Games" className="h-6 w-auto" />
                     <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">POWERED BY G.T AI GAMES</span>
                 </a>
-                <div className="text-xs text-white/40 mt-2 font-mono">v1.4.0</div>
+                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.0</div>
             </div>
         </div>
     );

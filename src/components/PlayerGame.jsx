@@ -230,12 +230,16 @@ export default function PlayerGame() {
         );
     }
 
-    // Get current question - use shuffled questions if available
-    let currentQ = {};
-    if (shuffledQuestions && shuffledQuestions.length > 0) {
-        currentQ = currentPack.questions.find(q => q.question === shuffledQuestions[questionIndex]) || {};
-    } else {
-        currentQ = currentPack.questions[questionIndex] || {};
+    // Get current question - PRIORITY: use serverQuestion from Firebase (synced from host)
+    // Fallback to local shuffled questions or pack questions
+    let currentQ = serverQuestion; // Use synced question from host first
+    if (!currentQ || !currentQ.question) {
+        // Fallback to local calculation if serverQuestion isn't available yet
+        if (shuffledQuestions && shuffledQuestions.length > 0) {
+            currentQ = currentPack.questions.find(q => q.question === shuffledQuestions[questionIndex]) || {};
+        } else {
+            currentQ = currentPack.questions[questionIndex] || {};
+        }
     }
 
     // Calculate Rank
@@ -301,13 +305,13 @@ export default function PlayerGame() {
 
                     {gameState === "QUESTION" && (
                         <div className="flex-1 flex flex-col animate-pop">
-                            {/* Question Context - Optional, mostly visual filler on phone */}
-                            <div className="flex-1 flex flex-col items-center justify-center mb-8 text-center">
-                                <span className="text-showoff-electric text-sm tracking-[0.2em] font-bold mb-2 uppercase">
+                            {/* Question Display */}
+                            <div className="flex-1 flex flex-col items-center justify-center mb-8 text-center px-4">
+                                <span className="text-showoff-electric text-sm tracking-[0.2em] font-bold mb-3 uppercase">
                                     {currentQ.category || "Question"}
                                 </span>
-                                <h3 className="text-2xl font-black text-white leading-tight max-w-[80%]">
-                                    Look at the TV!
+                                <h3 className="text-xl md:text-2xl font-black text-white leading-tight max-w-[90%]">
+                                    {serverQuestion || currentQ.question || "Loading question..."}
                                 </h3>
                             </div>
 
@@ -315,6 +319,7 @@ export default function PlayerGame() {
                             <div className={`grid grid-cols-2 gap-4 ${hasAnswered ? 'pointer-events-none opacity-80' : ''}`}>
                                 {['A', 'B', 'C', 'D'].map((label, idx) => {
                                     const isSelected = selectedOption === idx;
+                                    const optionText = currentQ.options?.[idx] || label;
                                     const styles = [
                                         'btn-answer-a', // 0
                                         'btn-answer-b', // 1
@@ -333,7 +338,10 @@ export default function PlayerGame() {
                                                 ${hasAnswered && isSelected ? 'ring-4 ring-white scale-105 shadow-[0_0_30px_rgba(255,255,255,0.5)]' : ''}
                                             `}
                                         >
-                                            {label}
+                                            <div className="flex flex-col items-center justify-center gap-1">
+                                                <span className="text-3xl font-black">{label}</span>
+                                                <span className="text-sm font-medium opacity-90 leading-tight">{optionText}</span>
+                                            </div>
                                         </button>
                                     );
                                 })}
