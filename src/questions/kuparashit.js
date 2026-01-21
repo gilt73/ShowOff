@@ -6,15 +6,15 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מה שמה של הקופאית הראשית?",
-        options: ["כוכבה", "רמי", "דינה", "מוטי"],
-        correctIndex: 0,
+        options: ["מוטי", "דינה", "רמי", "כוכבה"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "סופר",
         question: "איך קוראים לסופרמרקט?",
-        options: ["קופה ראשית", "מכולת ראשית", "שוק ראשי", "סופר ישראלי"],
+        options: ["קופה ראשית", "סופר ישראלי", "מכולת ראשית", "שוק ראשי"],
         correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
@@ -22,55 +22,55 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מה התפקיד של רמי?",
-        options: ["מנהל", "קופאי", "אחראי ירקות", "שומר"],
-        correctIndex: 0,
+        options: ["אחראי ירקות", "שומר", "קופאי", "מנהל"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "כללי",
         question: "איפה מתרחשת הסדרה?",
-        options: ["סופרמרקט", "מסעדה", "בנק", "משרד"],
-        correctIndex: 0,
+        options: ["בנק", "סופרמרקט", "משרד", "מסעדה"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מי האיש עם המשקפיים?",
-        options: ["מוטי", "רמי", "דודו", "שלומי"],
-        correctIndex: 0,
+        options: ["דודו", "מוטי", "שלומי", "רמי"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "מה הסגנון של הסדרה?",
-        options: ["ציני", "רומנטי", "דרמטי", "פנטסיה"],
-        correctIndex: 0,
+        options: ["רומנטי", "ציני", "פנטסיה", "דרמטי"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "איזו דמות היא הכי עצבנית?",
-        options: ["כוכבה", "רמי", "דינה", "מוטי"],
-        correctIndex: 0,
+        options: ["רמי", "כוכבה", "דינה", "מוטי"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "כללי",
         question: "באיזו שנה הסדרה התחילה?",
-        options: ["2014", "2012", "2016", "2010"],
-        correctIndex: 0,
+        options: ["2010", "2012", "2014", "2016"],
+        correctIndex: 2,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מי הכי חביב מבין העובדים?",
-        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        options: ["דודו", "מוטי", "כוכבה", "רמי"],
         correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
@@ -78,23 +78,23 @@ export const kuparashitQuestions = [
     {
         category: "כללי",
         question: "מה סוג הלקוחות בסדרה?",
-        options: ["משעממים ומעצבנים", "חמודים", "עשירים", "זקנים"],
-        correctIndex: 0,
+        options: ["זקנים", "משעממים ומעצבנים", "חמודים", "עשירים"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "מה הכי שנוא על כוכבה?",
-        options: ["לקוחות", "עבודה", "רמי", "הכל"],
-        correctIndex: 3,
+        options: ["הכל", "לקוחות", "רמי", "עבודה"],
+        correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מי האופטימי ביותר?",
-        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        options: ["דודו", "כוכבה", "מוטי", "רמי"],
         correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
@@ -102,7 +102,7 @@ export const kuparashitQuestions = [
     {
         category: "כללי",
         question: "כמה עונות יש לסדרה?",
-        options: ["3+", "1", "2", "5"],
+        options: ["3+", "1", "5", "2"],
         correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
@@ -110,31 +110,31 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מי תמיד מתלונן?",
-        options: ["רמי", "כוכבה", "דודו", "מוטי"],
-        correctIndex: 0,
+        options: ["כוכבה", "דודו", "מוטי", "רמי"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "מה הקטע החוזר בסדרה?",
-        options: ["לקוחות מטומטמים", "אהבה", "פשע", "הרפתקאות"],
-        correctIndex: 0,
+        options: ["אהבה", "הרפתקאות", "לקוחות מטומטמים", "פשע"],
+        correctIndex: 2,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "כללי",
         question: "איזה ז'אנר הסדרה?",
-        options: ["קומדיה", "דרמה", "מתח", "פנטסיה"],
-        correctIndex: 0,
+        options: ["מתח", "קומדיה", "פנטסיה", "דרמה"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מי הכי רגוע?",
-        options: ["דודו", "כוכבה", "רמי", "אף אחד"],
+        options: ["דודו", "אף אחד", "כוכבה", "רמי"],
         correctIndex: 0,
         difficulty: 1,
         timeLimit: 20
@@ -144,31 +144,31 @@ export const kuparashitQuestions = [
     {
         category: "עלילה",
         question: "מה קורה כשלקוח מעצבן מגיע?",
-        options: ["כוכבה מתפוצצת", "רמי מתעלם", "דודו מחייך", "מוטי בורח"],
-        correctIndex: 0,
+        options: ["רמי מתעלם", "כוכבה מתפוצצת", "מוטי בורח", "דודו מחייך"],
+        correctIndex: 1,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מה הקשר בין כוכבה לרמי?",
-        options: ["עמיתים לעבודה", "חברים", "זוג", "אחים"],
-        correctIndex: 0,
+        options: ["זוג", "חברים", "אחים", "עמיתים לעבודה"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "מה המשפט האהוב של כוכבה?",
-        options: ["מה אתה רוצה?!", "בוקר טוב", "תודה רבה", "איזה יופי"],
-        correctIndex: 0,
+        options: ["תודה רבה", "בוקר טוב", "מה אתה רוצה?!", "איזה יופי"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "עלילה",
         question: "מה רמי תמיד מנסה לעשות?",
-        options: ["לחסוך כסף", "להרוויח יותר", "למכור", "לברוח"],
+        options: ["לחסוך כסף", "להרוויח יותר", "לברוח", "למכור"],
         correctIndex: 0,
         difficulty: 2,
         timeLimit: 20
@@ -176,31 +176,31 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מי האחראי על הירקות?",
-        options: ["דינה", "דודו", "מוטי", "רמי"],
-        correctIndex: 0,
+        options: ["דודו", "מוטי", "דינה", "רמי"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "למה הלקוחות תמיד מתלוננים?",
-        options: ["על הכל", "על מחירים", "על שירות", "על איכות"],
-        correctIndex: 0,
+        options: ["על מחירים", "על שירות", "על הכל", "על איכות"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "עלילה",
         question: "מה קורה כשיש ביקורת בסופר?",
-        options: ["כולם מתחפשים", "כולם בורחים", "סוגרים", "שמחים"],
-        correctIndex: 0,
+        options: ["כולם בורחים", "שמחים", "כולם מתחפשים", "סוגרים"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "דמויות",
         question: "מה המאפיין של מוטי?",
-        options: ["משקפיים ושקט", "צעקות", "צחוק", "בכי"],
+        options: ["משקפיים ושקט", "צחוק", "בכי", "צעקות"],
         correctIndex: 0,
         difficulty: 2,
         timeLimit: 20
@@ -208,15 +208,15 @@ export const kuparashitQuestions = [
     {
         category: "הומור",
         question: "איך כוכבה מתייחסת ללקוחות?",
-        options: ["בזלזול", "באהבה", "בכבוד", "במקצועיות"],
-        correctIndex: 0,
+        options: ["במקצועיות", "בכבוד", "באהבה", "בזלזול"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "עלילה",
         question: "מה הכי מעצבן את רמי?",
-        options: ["הוצאות", "עובדים", "לקוחות", "בעלים"],
+        options: ["הוצאות", "לקוחות", "בעלים", "עובדים"],
         correctIndex: 0,
         difficulty: 2,
         timeLimit: 20
@@ -232,15 +232,15 @@ export const kuparashitQuestions = [
     {
         category: "הומור",
         question: "מה הסיטואציה החוזרת?",
-        options: ["לקוח טיפש", "שוד", "אהבה", "מסיבה"],
-        correctIndex: 0,
+        options: ["מסיבה", "אהבה", "שוד", "לקוח טיפש"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "עלילה",
         question: "מה קורה כשמישהו רוצה להחזיר מוצר?",
-        options: ["כוכבה מסרבת", "רמי שמח", "מוטי עוזר", "דודו מתלונן"],
+        options: ["כוכבה מסרבת", "מוטי עוזר", "רמי שמח", "דודו מתלונן"],
         correctIndex: 0,
         difficulty: 2,
         timeLimit: 20
@@ -248,15 +248,15 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מה התכונה של דודו?",
-        options: ["נחמד ותמים", "ציני", "עצבני", "חכם"],
-        correctIndex: 0,
+        options: ["עצבני", "ציני", "חכם", "נחמד ותמים"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "הומור",
         question: "מה הבדיחה החוזרת?",
-        options: ["אין מזל בחיים", "הכל טוב", "אהבה", "חלומות"],
+        options: ["אין מזל בחיים", "אהבה", "חלומות", "הכל טוב"],
         correctIndex: 0,
         difficulty: 2,
         timeLimit: 20
@@ -272,8 +272,8 @@ export const kuparashitQuestions = [
     {
         category: "דמויות",
         question: "מי הכי לא אוהב את העבודה?",
-        options: ["כוכבה", "דודו", "מוטי", "דינה"],
-        correctIndex: 0,
+        options: ["מוטי", "דודו", "דינה", "כוכבה"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
@@ -282,23 +282,23 @@ export const kuparashitQuestions = [
     {
         category: "טריוויה",
         question: "באיזו ערוץ הסדרה שודרה?",
-        options: ["HOT", "כאן 11", "ערוץ 12", "נטפליקס"],
-        correctIndex: 0,
+        options: ["כאן 11", "HOT", "נטפליקס", "ערוץ 12"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "עלילה",
         question: "מה הסכסוך המרכזי בסדרה?",
-        options: ["חיי היומיום המעצבנים", "אהבה", "כסף", "משפחה"],
-        correctIndex: 0,
+        options: ["אהבה", "חיי היומיום המעצבנים", "כסף", "משפחה"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "דמויות",
         question: "מי כתב את הסדרה?",
-        options: ["אסי כהן", "גל זייד", "עדי אלשיך", "לא ידוע"],
+        options: ["אסי כהן", "עדי אלשיך", "גל זייד", "לא ידוע"],
         correctIndex: 0,
         difficulty: 3,
         timeLimit: 25
@@ -306,31 +306,31 @@ export const kuparashitQuestions = [
     {
         category: "הומור",
         question: "מה הציניות בסדרה מייצגת?",
-        options: ["חיים ישראליים", "אהבה", "עושר", "חלומות"],
-        correctIndex: 0,
+        options: ["אהבה", "חלומות", "חיים ישראליים", "עושר"],
+        correctIndex: 2,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "עלילה",
         question: "מה קורה כשהסופר כמעט נסגר?",
-        options: ["כולם נלחמים להציל", "שמחים", "עוזבים", "קונים מתחרה"],
-        correctIndex: 0,
+        options: ["קונים מתחרה", "עוזבים", "כולם נלחמים להציל", "שמחים"],
+        correctIndex: 2,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "דמויות",
         question: "מי השחקנית שמגלמת את כוכבה?",
-        options: ["מסתתר בחידה", "לא ידוע", "ידוע", "סוד"],
-        correctIndex: 1,
+        options: ["ידוע", "מסתתר בחידה", "סוד", "לא ידוע"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "טריוויה",
         question: "כמה עובדים יש בסופר?",
-        options: ["משתנה", "5", "10", "3"],
+        options: ["משתנה", "5", "3", "10"],
         correctIndex: 0,
         difficulty: 3,
         timeLimit: 25
@@ -338,39 +338,39 @@ export const kuparashitQuestions = [
     {
         category: "הומור",
         question: "מה המסר המרכזי?",
-        options: ["החיים קשים אבל ממשיכים", "אהבה", "כסף", "הצלחה"],
-        correctIndex: 0,
+        options: ["הצלחה", "החיים קשים אבל ממשיכים", "כסף", "אהבה"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "עלילה",
         question: "מה הדרמה הגדולה בעונה 2?",
-        options: ["לקוח מטורף", "אהבה", "פיטורים", "שריפה"],
-        correctIndex: 0,
+        options: ["פיטורים", "אהבה", "שריפה", "לקוח מטורף"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "דמויות",
         question: "מי מהדמויות הכי מציאותית?",
-        options: ["כוכבה", "דודו", "רמי", "מוטי"],
-        correctIndex: 0,
+        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "טריוויה",
         question: "איזה קהל אוהב את הסדרה?",
-        options: ["מבוגרים", "ילדים", "זקנים", "תיירים"],
-        correctIndex: 0,
+        options: ["תיירים", "זקנים", "ילדים", "מבוגרים"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "הומור",
         question: "מה הסטיגמה שהסדרה שוברת?",
-        options: ["עבודה בשירות", "עושר", "יופי", "הצלחה"],
+        options: ["עבודה בשירות", "הצלחה", "יופי", "עושר"],
         correctIndex: 0,
         difficulty: 3,
         timeLimit: 25
@@ -378,32 +378,32 @@ export const kuparashitQuestions = [
     {
         category: "עלילה",
         question: "מה קורה כשרמי מנסה פרסום?",
-        options: ["כישלון", "הצלחה", "שריפה", "עזיבה"],
-        correctIndex: 0,
+        options: ["עזיבה", "כישלון", "שריפה", "הצלחה"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "דמויות",
         question: "מי הדמות הכי פחות מפותחת?",
-        options: ["מוטי", "כוכבה", "רמי", "דודו"],
-        correctIndex: 0,
+        options: ["דודו", "כוכבה", "רמי", "מוטי"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "טריוויה",
         question: "האם יש עונה 4?",
-        options: ["תלוי בשנה", "כן", "לא", "מבוטל"],
-        correctIndex: 0,
+        options: ["לא", "מבוטל", "כן", "תלוי בשנה"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "הומור",
         question: "מה הציטוט המפורסם ביותר?",
-        options: ["מה אתה רוצה?!", "שלום", "תודה", "להתראות"],
-        correctIndex: 0,
+        options: ["תודה", "להתראות", "שלום", "מה אתה רוצה?!"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     }
