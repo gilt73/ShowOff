@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { gamePacks, uiText, shuffleArray } from '../questions';
+import { getText, getOptions } from '../utils/languageHelper';
 
 export default function SinglePlayerGame() {
     const [searchParams] = useSearchParams();
     const packId = searchParams.get('pack') || 'friends';
     const lang = searchParams.get('lang') || 'en';
+    const gameMode = searchParams.get('mode') || 'penalty'; // 'classic' or 'penalty'
 
     // Helper for text
     const t = (key) => uiText[lang][key];
@@ -108,13 +110,16 @@ export default function SinglePlayerGame() {
                         <div className="font-black text-xl">DEBUG MODE</div>
                         <div className="text-sm font-mono">{currentPack.title[lang]}</div>
                     </div>
+                    <div className={`px-3 py-1 rounded-full text-xs font-bold ${gameMode === 'penalty' ? 'bg-pink-600 text-white' : 'bg-blue-500 text-white'}`}>
+                        {gameMode === 'penalty' ? '😈 ShowOff' : '🏆 Classic'}
+                    </div>
                 </div>
                 <div className="flex items-center gap-4">
                     <div className="font-bold text-lg">
                         Question {currentQuestionIndex + 1} / {totalQuestions}
                     </div>
-                    <Link to="/" className="bg-black text-yellow-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-900 transition">
-                        ← Exit
+                    <Link to="/debug-selector" className="bg-black text-yellow-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-900 transition">
+                        ← Back
                     </Link>
                 </div>
             </div>
@@ -127,13 +132,13 @@ export default function SinglePlayerGame() {
                     <div className="w-full max-w-4xl">
                         {/* Category */}
                         <div className="text-showoff-accent font-bold tracking-widest mb-4 uppercase drop-shadow-lg text-center text-xl">
-                            {currentQ.category}
+                            {getText(currentQ.category, lang)}
                         </div>
 
                         {/* Question */}
                         <div className="card-glass p-8 text-center border-2 border-showoff-blue backdrop-blur-md bg-black/40 mb-6">
                             <h2 className="text-3xl md:text-5xl font-bold leading-tight">
-                                {currentQ.question}
+                                {getText(currentQ.question, lang)}
                             </h2>
                         </div>
 
@@ -158,7 +163,7 @@ export default function SinglePlayerGame() {
 
                             {/* Answer Grid */}
                             <div className="grid grid-cols-2 gap-4 md:gap-6">
-                                {currentQ.options && currentQ.options.map((opt, idx) => {
+                                {getOptions(currentQ.options, lang).map((opt, idx) => {
                                     const labels = ['A', 'B', 'C', 'D'];
                                     const styles = [
                                         'btn-answer-a',
@@ -196,20 +201,20 @@ export default function SinglePlayerGame() {
                                     {isCorrect ? '✅' : '❌'}
                                 </div>
                                 <h2 className={`text-5xl font-black mb-4 tracking-wide ${isCorrect ? 'text-green-400' : 'text-red-400'}`}>
-                                    {isCorrect ? 'CORRECT!' : 'WRONG!'}
+                                    {isCorrect ? t('correct') : t('wrong')}
                                 </h2>
 
                                 {!isCorrect && (
                                     <div className="mt-6">
-                                        <div className="text-white/70 text-sm uppercase tracking-widest mb-2">Correct Answer:</div>
+                                        <div className="text-white/70 text-sm uppercase tracking-widest mb-2">{t('correctAnswer')}</div>
                                         <div className="bg-green-500/20 border border-green-500/30 rounded-lg p-4 mb-4">
                                             <span className="text-2xl font-bold text-green-300">
-                                                {currentQ.options[currentQ.correctIndex]}
+                                                {getOptions(currentQ.options, lang)[currentQ.correctIndex]}
                                             </span>
                                         </div>
-                                        {currentQ.penaltyTask && (
+                                        {gameMode === 'penalty' && currentQ.penaltyTask && (
                                             <div className="bg-black/40 p-4 rounded-xl border border-red-500/20">
-                                                <div className="text-red-200 text-sm uppercase tracking-widest mb-1">Penalty Task:</div>
+                                                <div className="text-red-200 text-sm uppercase tracking-widest mb-1">{t('penaltyTask')}</div>
                                                 <p className="text-red-300 font-medium text-lg leading-tight">{currentQ.penaltyTask}</p>
                                             </div>
                                         )}
@@ -217,7 +222,7 @@ export default function SinglePlayerGame() {
                                 )}
 
                                 <div className="mt-6 text-white/50 text-sm animate-pulse">
-                                    Auto-advancing to next question...
+                                    {t('autoAdvancing')}
                                 </div>
                             </div>
                         </div>

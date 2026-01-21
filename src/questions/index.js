@@ -2,7 +2,6 @@
 // This file exports all game packs and UI text
 // Add new packs by creating a new file and importing here
 
-import { sportsPack } from './sports';
 import { friendsPack } from './friends';
 import { hayorshimPack } from './hayorshim';
 import { avatarPack } from './avatar';
@@ -11,7 +10,6 @@ import { homeAlonePack } from './homealone';
 
 // All available game packs
 export const gamePacks = {
-    sports: sportsPack,
     friends: friendsPack,
     hayorshim: hayorshimPack,
     avatar: avatarPack,
@@ -36,7 +34,12 @@ export const uiText = {
         playAgain: "Play Again",
         rounds: "Rounds",
         yourRank: "Your Rank",
-        yourScore: "Your Score"
+        yourScore: "Your Score",
+        correct: "CORRECT!",
+        wrong: "WRONG!",
+        correctAnswer: "Correct Answer:",
+        penaltyTask: "Penalty Task:",
+        autoAdvancing: "Auto-advancing to next question..."
     },
     he: {
         host: "צור משחק",
@@ -53,7 +56,12 @@ export const uiText = {
         playAgain: "שחק שוב",
         rounds: "סיבובים",
         yourRank: "הדירוג שלך",
-        yourScore: "הניקוד שלך"
+        yourScore: "הניקוד שלך",
+        correct: "נכון!",
+        wrong: "טעות!",
+        correctAnswer: "התשובה הנכונה:",
+        penaltyTask: "משימת עונש:",
+        autoAdvancing: "עובר לשאלה הבאה..."
     }
 };
 

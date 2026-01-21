@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import { ref, set, onValue, get, child, update } from "firebase/database";
 import { db } from '../firebaseConfig';
 import { gamePacks, uiText } from '../questions';
+import { getText, getOptions } from '../utils/languageHelper';
 
 export default function PlayerGame() {
     const [joined, setJoined] = useState(false);
@@ -308,10 +309,10 @@ export default function PlayerGame() {
                             {/* Question Display */}
                             <div className="flex-1 flex flex-col items-center justify-center mb-8 text-center px-4">
                                 <span className="text-showoff-electric text-sm tracking-[0.2em] font-bold mb-3 uppercase">
-                                    {currentQ.category || "Question"}
+                                    {getText((serverQuestion && serverQuestion.category) || currentQ.category, lang) || "Question"}
                                 </span>
                                 <h3 className="text-xl md:text-2xl font-black text-white leading-tight max-w-[90%]">
-                                    {serverQuestion || currentQ.question || "Loading question..."}
+                                    {getText((serverQuestion && serverQuestion.question) || currentQ.question, lang) || "Loading question..."}
                                 </h3>
                             </div>
 
@@ -319,7 +320,9 @@ export default function PlayerGame() {
                             <div className={`grid grid-cols-2 gap-4 ${hasAnswered ? 'pointer-events-none opacity-80' : ''}`}>
                                 {['A', 'B', 'C', 'D'].map((label, idx) => {
                                     const isSelected = selectedOption === idx;
-                                    const optionText = currentQ.options?.[idx] || label;
+                                    // Use synced options from serverQuestion, fallback to local
+                                    const options = (serverQuestion && serverQuestion.options) || currentQ.options || [];
+                                    const optionText = options[idx] || label;
                                     const styles = [
                                         'btn-answer-a', // 0
                                         'btn-answer-b', // 1

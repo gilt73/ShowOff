@@ -5,6 +5,7 @@ import { useSearchParams } from 'react-router-dom';
 import { db } from '../firebaseConfig';
 import { gamePacks, uiText, shuffleArray, selectDifficultyBasedQuestions } from '../questions';
 import { analytics } from '../utils/analytics';
+import { getText, getOptions } from '../utils/languageHelper';
 
 export default function HostGame() {
     const [searchParams] = useSearchParams();

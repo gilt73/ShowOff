@@ -5,6 +5,7 @@ import PlayerGame from './components/PlayerGame';
 import SinglePlayerGame from './components/SinglePlayerGame';
 import DebugLog from './components/DebugLog';
 import GameLibraryScreen from './components/GameLibraryScreen';
+import DebugGameSelector from './components/DebugGameSelector';
 import { gamePacks, uiText } from './questions';
 
 function Home() {
@@ -26,8 +27,8 @@ function Home() {
 
             {/* Language Toggle */}
             <div className="absolute top-4 right-4 z-10 flex gap-2">
-                <button onClick={() => setLang('he')} className={`text - 2xl hover: scale - 110 transition ${lang === 'he' ? 'grayscale-0' : 'grayscale'} `}>🇮🇱</button>
-                <button onClick={() => setLang('en')} className={`text - 2xl hover: scale - 110 transition ${lang === 'en' ? 'grayscale-0' : 'grayscale'} `}>🇺🇸</button>
+                <button onClick={() => setLang('he')} className={`text-2xl hover:scale-110 transition ${lang === 'he' ? 'grayscale-0' : 'grayscale'}`}>🇮🇱</button>
+                <button onClick={() => setLang('en')} className={`text-2xl hover:scale-110 transition ${lang === 'en' ? 'grayscale-0' : 'grayscale'}`}>🇺🇸</button>
             </div>
 
             <div className="relative z-10 flex-1 flex flex-col items-center justify-center space-y-8 w-full max-w-4xl pt-20 pb-32">
@@ -65,13 +66,13 @@ function Home() {
                     <div className="bg-black/40 p-1 rounded-full flex border border-white/20 backdrop-blur-md mb-4 w-fit mx-auto">
                         <button
                             onClick={() => setGameMode('classic')}
-                            className={`px - 6 py - 2 rounded - full font - bold transition - all ${gameMode === 'classic' ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400 hover:text-white'} `}
+                            className={`px-6 py-2 rounded-full font-bold transition-all ${gameMode === 'classic' ? 'bg-blue-500 text-white shadow-lg' : 'text-gray-400 hover:text-white'}`}
                         >
                             🏆 {lang === 'he' ? 'תחרות רגילה' : 'Classic Quiz'}
                         </button>
                         <button
                             onClick={() => setGameMode('penalty')}
-                            className={`px - 6 py - 2 rounded - full font - bold transition - all ${gameMode === 'penalty' ? 'bg-pink-600 text-white shadow-lg' : 'text-gray-400 hover:text-white'} `}
+                            className={`px-6 py-2 rounded-full font-bold transition-all ${gameMode === 'penalty' ? 'bg-pink-600 text-white shadow-lg' : 'text-gray-400 hover:text-white'}`}
                         >
                             😈 {lang === 'he' ? 'משימות ועונשים' : 'ShowOff Mode'}
                         </button>
@@ -102,7 +103,7 @@ function Home() {
 
                 {/* Debug Mode Button */}
                 <div className="mt-8">
-                    <Link to={`/debug?pack=${selectedPack}&lang=${lang}`}>
+                    <Link to="/debug-selector">
                         <button className="w-64 text-xl h-16 bg-yellow-500 text-black font-black rounded-2xl border-b-4 border-yellow-700 hover:scale-105 hover:bg-yellow-400 transform transition duration-200 shadow-xl flex items-center justify-center gap-3 mx-auto">
                             <span className="text-2xl">🕵️</span>
                             <span>Debug Mode</span>
@@ -139,6 +140,7 @@ function App() {
                 <Route path="/library" element={<GameLibraryScreen />} />
                 <Route path="/host" element={<HostGame />} />
                 <Route path="/play" element={<PlayerGame />} />
+                <Route path="/debug-selector" element={<DebugGameSelector />} />
                 <Route path="/debug" element={<SinglePlayerGame />} />
             </Routes>
         </BrowserRouter>

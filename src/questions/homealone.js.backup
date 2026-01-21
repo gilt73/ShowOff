@@ -1,0 +1,96 @@
+// Home Alone Questions - BILINGUAL Hebrew/English
+// Version 2.0 with randomized correct answers
+
+export const homeAloneQuestions = [
+    // EASY - 17Q
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What is the main character's name?", he: "מה שם הדמות הראשית?" }, options: { en: ["Kevin McCallister", "Kevin Johnson", "Kevin Smith", "Kevin Brown"], he: ["קווין מקאליסטר", "קווין ג'ונסון", "קווין סמית'", "קווין בראון"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "Where does Kevin's family go for vacation?", he: "לאן משפחתו של קווין נוסעת לחופשה?" }, options: { en: ["Paris", "London", "Rome", "New York"], he: ["פריז", "לונדון", "רומא", "ניו יורק"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "What are the burglars called?", he: "איך קוראים לפורצים?" }, options: { en: ["Wet Bandits", "Sticky Bandits", "Cat Burglars", "Night Thieves"], he: ["השודדים הרטובים", "השודדים הדביקים", "גנבי חתולים", "גנבי הלילה"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "How old is Kevin in the first movie?", he: "בן כמה קווין בסרט הראשון?" }, options: { en: ["8", "10", "7", "9"], he: ["8", "10", "7", "9"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "Who plays Harry?", he: "מי מגלם את הארי?" }, options: { en: ["Joe Pesci", "Daniel Stern", "John Candy", "Tim Curry"], he: ["ג'ו פיישי", "דניאל סטרן", "ג'ון קנדי", "טים קרי"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "Who plays Marv?", he: "מי מגלם את מארב?" }, options: { en: ["Daniel Stern", "Joe Pesci", "John Candy", "Steve Buscemi"], he: ["דניאל סטרן", "ג'ו פיישי", "ג'ון קנדי", "סטיב בושמי"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "Why was Kevin left alone?", he: "למה קווין נשאר לבד?" }, options: { en: ["Family overslept", "He ran away", "Punishment", "Mistake"], he: ["המשפחה ישנה יותר מדי", "הוא ברח", "עונש", "טעות"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin order at the beginning?", he: "מה קווין מזמין בהתחלה?" }, options: { en: ["Pizza", "Hot dog", "Burger", "Pasta"], he: ["פיצה", "נקניקייה", "המבורגר", "פסטה"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What does Kevin put on the stairs?", he: "מה קווין שם על המדרגות?" }, options: { en: ["Toys", "Oil", "Nails", "Paint"], he: ["צעצועים", "שמן", "מסמרים", "צבע"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Family", he: "משפחה" }, question: { en: "What is Kevin's mom's name?", he: "מה שם אמא של קווין?" }, options: { en: ["Kate", "Mary", "Linda", "Sarah"], he: ["קייט", "מרי", "לינדה", "שרה"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Neighbors", he: "שכנים" }, question: { en: "Who is Old Man Marley?", he: "מי זה איש הזקן מארלי?" }, options: { en: ["Scary neighbor", "Burglar", "Santa", "Police"], he: ["שכן מפחיד", "פורץ", "סנטה", "שוטר"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "What holiday is the movie set during?", he: "באיזה חג מתרחש הסרט?" }, options: { en: ["Christmas", "Thanksgiving", "New Year", "Easter"], he: ["חג המולד", "חג ההודיה", "ראש השנה", "פסחא"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin scream?", he: "מה קווין צורח?" }, options: { en: ["AHHH!", "Help!", "Mom!", "No!"], he: ["אההה!", "עזרה!", "אמא!", "לא!"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What trap burns Harry's head?", he: "איזו מלכודת שורפת את הראש של הארי?" }, options: { en: ["Blowtorch", "Iron", "Matches", "Candle"], he: ["מבער", "מגהץ", "גפרורים", "נר"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "Where is the McCallister house?", he: "איפה הבית של מקאליסטר?" }, options: { en: ["Chicago", "New York", "LA", "Boston"], he: ["שיקגו", "ניו יורק", "לוס אנג'לס", "בוסטון"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin use to shave?", he: "במה קווין משתמש להתגלח?" }, options: { en: ["His dad's razor", "Nothing", "Scissors", "Knife"], he: ["סכין הגילוח של אבא", "כלום", "מספריים", "סכין"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+    { category: { en: "Family", he: "משפחה" }, question: { en: "How many McCallister family members are there?", he: "כמה בני משפחה יש למקאליסטר?" }, options: { en: ["15", "10", "20", "5"], he: ["15", "10", "20", "5"] }, correctIndex: 0, difficulty: 1, timeLimit: 20 },
+
+    // MEDIUM - 17Q
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What does Marv step on that makes him scream?", he: "על מה מארב דורך שגורם לו לצרוח?" }, options: { en: ["Nails and ornaments", "Glass", "Lego", "Thumbtacks"], he: ["מסמרים וקישוטים", "זכוכית", "לגו", "נעצים"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "What movie does Kevin watch?", he: "איזה סרט קווין צופה?" }, options: { en: ["Angels with Filthy Souls", "It's a Wonderful Life", "Miracle on 34th", "Die Hard"], he: ["מלאכים עם נשמות מלוכלכות", "זו חיים נפלאים", "נס ב-34", "מת לחיות"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "What does Harry's gold tooth say?", he: "מה כתוב על השן הזהב של הארי?" }, options: { en: ["Nothing, it's just gold", "Harry", "Wet", "Money"], he: ["כלום, היא סתם זהב", "הארי", "רטוב", "כסף"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What hits Marv in the face?", he: "מה מכה את מארב בפנים?" }, options: { en: ["Paint cans", "Bricks", "Hammer", "Shovel"], he: ["פחי צבע", "לבנים", "פטיש", "את"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin steal from the store?", he: "מה קווין גונב מהחנות?" }, options: { en: ["Toothbrush", "Candy", "Toys", "Food"], he: ["מברשת שיניים", "ממתקים", "צעצועים", "אוכל"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Family", he: "משפחה" }, question: { en: "What is Kevin's brother's name?", he: "מה שם אחיו של קווין?" }, options: { en: ["Buzz", "Jeff", "Mike", "Brad"], he: ["באז", "ג'ף", "מייק", "בראד"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "What do the Wet Bandits leave as their signature?", he: "מה השודדים הרטובים משאירים כחתימה?" }, options: { en: ["Flooded houses", "Wet towels", "Water bottles", "Nothing"], he: ["בתים מוצפים", "מגבות רטובות", "בקבוקי מים", "כלום"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Neighbors", he: "שכנים" }, question: { en: "What is the rumor about Old Man Marley?", he: "מה השמועה על הזקן מארלי?" }, options: { en: ["He killed his family", "He's a ghost", "He's rich", "He's Santa"], he: ["הוא הרג את משפחתו", "הוא רוח רפאים", "הוא עשיר", "הוא סנטה"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "How does Kate get back home?", he: "איך קייט חוזרת הביתה?" }, options: { en: ["With band", "Flies", "Drives", "Train"], he: ["עם להקה", "טסה", "נוסעת", "רכבת"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What does Kevin use to make the house look occupied?", he: "במה קווין משתמש כדי שהבית ייראה מאוכלס?" }, options: { en: ["All above", "Lights", "Music", "Mannequins"], he: ["כל הנ\"ל", "אורות", "מוזיקה", "בובות"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin buy at the grocery store?", he: "מה קווין קונה במכולת?" }, options: { en: ["Groceries", "Toys", "Candy", "Nothing"], he: ["מצרכים", "צעצועים", "ממתקים", "כלום"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Family", he: "משפחה" }, question: { en: "What does Buzz call Kevin?", he: "איך באז קורא לקווין?" }, options: { en: ["Les incompétent", "Dummy", "Worm", "Baby"], he: ["לס אינקומפטנט", "טיפש", "תולעת", "תינוק"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "Who helps Kevin at the end?", he: "מי עוזר לקווין בסוף?" }, options: { en: ["Old Man Marley", "Police", "His dad", "Santa"], he: ["הזקן מארלי", "משטרה", "אבא שלו", "סנטה"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "What is the basement trap?", he: "מה המלכודת במרתף?" }, options: { en: ["Rope to stairs", "Fire", "Water", "Spikes"], he: ["חבל למדרגות", "אש", "מים", "קוצים"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Burglars", he: "פורצים" }, question: { en: "How do the burglars get caught?", he: "איך הפורצים נתפסים?" }, options: { en: ["Marley", "Kevin", "Neighbors", "Police"], he: ["מארלי", "קווין", "שכנים", "משטרה"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Kevin", he: "קווין" }, question: { en: "What does Kevin wish for?", he: "מה קווין מאחל?" }, options: { en: ["Family disappear", "Toys", "Money", "New house"], he: ["משפחה תיעלם", "צעצועים", "כסף", "בית חדש"] }, correctIndex: 0, difficulty: 2, timeLimit: 20 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "What wakes up the family for the airport?", he: "מה מעיר את המשפחה לשדה התעופה?" }, options: { en: ["Neighbor", "Power outage", "Alarm", "Phone"], he: ["שכן", "הפסקת חשמל", "שעון מעורר", "טלפון"] }, correctIndex: 1, difficulty: 2, timeLimit: 20 },
+
+    // HARD - 16Q
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What is Fuller drinking that makes him wet the bed?", he: "מה פולר שותה שגורם לו להרטיב את המיטה?" }, options: { en: ["Pepsi", "Coke", "Juice", "Water"], he: ["פפסי", "קוקה קולה", "מיץ", "מים"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What year was Home Alone released?", he: "באיזו שנה יצא שוד ביתי?" }, options: { en: ["1990", "1989", "1991", "1992"], he: ["1990", "1989", "1991", "1992"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "Who directed Home Alone?", he: "מי ביים את שוד ביתי?" }, options: { en: ["Chris Columbus", "John Hughes", "Steven Spielberg", "Tim Burton"], he: ["כריס קולומבוס", "ג'ון יוז", "סטיבן ספילברג", "טים ברטון"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What is the line from the fake movie?", he: "מה המשפט מהסרט המזויף?" }, options: { en: ["Keep the change ya filthy animal", "Merry Christmas", "I'm home", "Get out"], he: ["שמור את העודף חיה מלוכלכת", "חג מולד שמח", "אני בבית", "צא החוצה"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What pet does Buzz have?", he: "איזה חיית מחמד יש לבאז?" }, options: { en: ["Tarantula", "Snake", "Rat", "Lizard"], he: ["טרנטולה", "נחש", "עכברוש", "לטאה"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What does Kevin find in Buzz's room?", he: "מה קווין מוצא בחדר של באז?" }, options: { en: ["Life savings", "Treasure", "Candy", "Toys"], he: ["חסכונות חיים", "אוצר", "ממתקים", "צעצועים"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What is the McCallister house address?", he: "מה הכתובת של בית מקאליסטר?" }, options: { en: ["671 Lincoln Avenue", "123 Main St", "456 Oak St", "789 Elm St"], he: ["לינקולן 671", "מיין 123", "אוק 456", "אלם 789"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What is the name of the polka band?", he: "מה שם להקת הפולקה?" }, options: { en: ["Kenosha Kickers", "Polka Kings", "Milwaukee Five", "Chicago Beats"], he: ["קנושה קיקרס", "מלכי הפולקה", "מילווקי חמישייה", "שיקגו ביטס"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Traps", he: "מלכודות" }, question: { en: "How many stairsteps are there?", he: "כמה מדרגות יש?" }, options: { en: ["14", "10", "15", "20"], he: ["14", "10", "15", "20"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What church does Old Man Marley go to?", he: "לאיזו כנסייה הזקן מארלי הולך?" }, options: { en: ["Not specified", "St. Mary's", "First Baptist", "Holy Trinity"], he: ["לא מצוין", "סנט מרי", "בפטיסט ראשון", "השילוש הקדוש"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "How much did Home Alone make at box office?", he: "כמה שוד ביתי הרוויח בקופות?" }, options: { en: ["Over $476M", "$100M", "$250M", "$500M"], he: ["מעל 476 מיליון", "100 מיליון", "250 מיליון", "500 מיליון"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What is Marv's last name?", he: "מה שם המשפחה של מארב?" }, options: { en: ["Merchants", "Morrison", "Martin", "Miller"], he: ["מרצ'נטס", "מוריסון", "מרטין", "מילר"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What van do the burglars drive?", he: "איזה ואן הפורצים נוהגים?" }, options: { en: ["Plumbing van", "Flowers", "Pizza", "Generic"], he: ["ואן שרברבות", "פרחים", "פיצה", "רגיל"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Plot", he: "עלילה" }, question: { en: "How many Home Alone movies are there?", he: "כמה סרטי שוד ביתי יש?" }, options: { en: ["6", "2", "3", "5"], he: ["6", "2", "3", "5"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "Who wrote the screenplay?", he: "מי כתב את התסריט?" }, options: { en: ["John Hughes", "Chris Columbus", "Macaulay Culkin", "Tim Burton"], he: ["ג'ון יוז", "כריס קולומבוס", "מקאולי קלקין", "טים ברטון"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 },
+    { category: { en: "Details", he: "פרטים" }, question: { en: "What does Kevin put on the doorknob?", he: "מה קווין שם על ידית הדלת?" }, options: { en: ["Heated metal", "Paint", "Glue", "Oil"], he: ["מתכת מחוממת", "צבע", "דבק", "שמן"] }, correctIndex: 0, difficulty: 3, timeLimit: 25 }
+];
+
+export const homeAlonePunishments = [
+    { text: { en: "Scream like Kevin for 5 seconds straight!", he: "צרח כמו קווין 5 שניות!" }, duration: 5 },
+    { text: { en: "Do the Kevin face (hands on cheeks) and scream", he: "עשה פרצוף קווין (ידיים על לחיים) וצרח" }, duration: 10 },
+    { text: { en: "Pretend to slip on stairs dramatically", he: "העמד פנים שאתה מחליק במדרגות בדרמטיות" }, duration: 15 },
+    { text: { en: "Say 'Keep the change ya filthy animal' in character", he: "תגיד 'שמור את העודף חיה מלוכלכת'" }, duration: 10 },
+    { text: { en: "Describe your dream trap for burglars", he: "תאר את מלכודת החלומות שלך לפורצים" }, duration: 30 },
+    { text: { en: "Walk like you stepped on toys for 15 seconds", he: "תלך כאילו דרכת על צעצועים 15 שניות" }, duration: 15 },
+    { text: { en: "Do a fake scream like Marv", he: "עשה צרחה מזויפת כמו מארב" }, duration: 10 },
+    { text: { en: "Pretend to get hit by paint cans twice", he: "העמד פנים שמכים אותך בפחי צבע פעמיים" }, duration: 20 },
+    { text: { en: "Act out slipping on ice dramatically", he: "העמד פנים שאתה מחליק על קרח בדרמטיות" }, duration: 15 },
+    { text: { en: "Say 'Merry Christmas ya filthy animal' 3 times", he: "תגיד 'חג מולד שמח חיה מלוכלכת' 3 פעמים" }, duration: 15 },
+    { text: { en: "Pretend to set up a trap", he: "העמד פנים שאתה מכין מלכודת" }, duration: 25 },
+    { text: { en: "Do Kevin's grocery shopping walk", he: "תעשה את הליכת הקניות של קווין" }, duration: 20 },
+    { text: { en: "Scream 'KEVIN!' like his mom", he: "צרח 'קווין!' כמו אמא שלו" }, duration: 5 },
+    { text: { en: "Act like you're home alone and scared", he: "התנהג כאילו אתה לבד בבית ומפוחד" }, duration: 20 },
+    { text: { en: "Make Marv's yell sound", he: "עשה את קול הצרחה של מארב" }, duration: 10 },
+    { text: { en: "Pretend to be a burglar sneaking around", he: "העמד פנים שאתה פורץ מתגנב" }, duration: 25 },
+    { text: { en: "Do the aftershave scream", he: "עשה צרחת אפטר שייב" }, duration: 10 },
+    { text: { en: "Tell everyone your favorite trap from the movie", he: "ספר לכולם על המלכודת האהובה עליך מהסרט" }, duration: 20 },
+    { text: { en: "Act out being hit by a shovel", he: "העמד פנים שמכים אותך באת" }, duration: 15 },
+    { text: { en: "Say a famous Home Alone quote dramatically", he: "תגיד ציטוט מפורסם משוד ביתי בדרמטיות" }, duration: 15 }
+];
+
+export const homeAlonePack = {
+    id: "home_alone",
+    title: { en: "Home Alone", he: "שוד ביתי" },
+    metadata: {
+        themeColor: "#C41E3A",
+        icon: "🏠",
+        bgImage: "/assets/homealone_bg.png"
+    },
+    questions: homeAloneQuestions,
+    punishments: homeAlonePunishments,
+    version: "2.0"
+};
