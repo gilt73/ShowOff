@@ -30,6 +30,17 @@ export default function GameLibraryScreen() {
                 <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/60 to-black/80" />
             </div>
 
+            {/* Back Button */}
+            <div className="absolute top-4 left-4 z-10">
+                <button
+                    onClick={() => navigate('/')}
+                    className="bg-black/40 backdrop-blur-md border border-white/20 hover:border-showoff-accent text-white font-bold px-4 py-2 rounded-full hover:scale-105 transition-all flex items-center gap-2 shadow-lg"
+                >
+                    <span className="text-xl">🏠</span>
+                    <span>{lang === 'he' ? 'חזרה ללובי' : 'Back to Lobby'}</span>
+                </button>
+            </div>
+
             {/* Language Toggle */}
             <div className="absolute top-4 right-4 z-10 flex gap-2">
                 <button onClick={() => setLang('he')} className={`text-2xl hover:scale-110 transition ${lang === 'he' ? 'grayscale-0' : 'grayscale'}`}>🇮🇱</button>

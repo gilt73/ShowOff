@@ -20,6 +20,7 @@ export default function SinglePlayerGame() {
     const [isCorrect, setIsCorrect] = useState(false);
     const [timer, setTimer] = useState(10);
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
+    const [currentPunishment, setCurrentPunishment] = useState(null);
 
     // Initialize shuffled questions on mount
     useEffect(() => {
@@ -48,7 +49,15 @@ export default function SinglePlayerGame() {
         setIsCorrect(correct);
         setShowResult(true);
 
-        // Auto-advance to next question after 1.5 seconds
+        // If wrong answer in ShowOff Mode, select random punishment from pack
+        if (!correct && gameMode === 'penalty' && currentPack.punishments && currentPack.punishments.length > 0) {
+            const randomPunishment = currentPack.punishments[Math.floor(Math.random() * currentPack.punishments.length)];
+            setCurrentPunishment(randomPunishment);
+            // Don't auto-advance when showing punishment - let user read it
+            return;
+        }
+
+        // Auto-advance to next question after 1.5 seconds (only for correct answers or non-penalty mode)
         setTimeout(() => {
             nextQuestion();
         }, 1500);
@@ -60,12 +69,14 @@ export default function SinglePlayerGame() {
             setSelectedAnswer(null);
             setShowResult(false);
             setTimer(10);
+            setCurrentPunishment(null);
         } else {
             // Reached end - option to restart
             setCurrentQuestionIndex(0);
             setSelectedAnswer(null);
             setShowResult(false);
             setTimer(10);
+            setCurrentPunishment(null);
         }
     };
 
@@ -78,6 +89,7 @@ export default function SinglePlayerGame() {
         setSelectedAnswer(null);
         setShowResult(false);
         setTimer(10);
+        setCurrentPunishment(null);
         // Re-shuffle questions
         const shuffled = shuffleArray([...currentPack.questions]);
         setShuffledQuestions(shuffled);
@@ -212,18 +224,21 @@ export default function SinglePlayerGame() {
                                                 {getOptions(currentQ.options, lang)[currentQ.correctIndex]}
                                             </span>
                                         </div>
-                                        {gameMode === 'penalty' && currentQ.penaltyTask && (
+                                        {gameMode === 'penalty' && currentPunishment && (
                                             <div className="bg-black/40 p-4 rounded-xl border border-red-500/20">
                                                 <div className="text-red-200 text-sm uppercase tracking-widest mb-1">{t('penaltyTask')}</div>
-                                                <p className="text-red-300 font-medium text-lg leading-tight">{currentQ.penaltyTask}</p>
+                                                <p className="text-red-300 font-medium text-lg leading-tight">{currentPunishment.text || currentPunishment}</p>
                                             </div>
                                         )}
                                     </div>
                                 )}
 
-                                <div className="mt-6 text-white/50 text-sm animate-pulse">
-                                    {t('autoAdvancing')}
-                                </div>
+                                {/* Only show auto-advancing message when NOT showing punishment */}
+                                {(!currentPunishment || isCorrect) && (
+                                    <div className="mt-6 text-white/50 text-sm animate-pulse">
+                                        {t('autoAdvancing')}
+                                    </div>
+                                )}
                             </div>
                         </div>
                     )}
