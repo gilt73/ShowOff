@@ -133,7 +133,7 @@ function Home() {
 
 function App() {
     return (
-        <BrowserRouter>
+        <BrowserRouter basename="/ShowOff">
             <DebugLog />
             <Routes>
                 <Route path="/" element={<Home />} />
