@@ -7,6 +7,7 @@ import { hayorshimPack } from './hayorshim';
 import { avatarPack } from './avatar';
 import { kuparashitPack } from './kuparashit';
 import { burekascultPack } from './burekascult';
+import { worldcupPack } from './worldcup';
 
 // All available game packs
 export const gamePacks = {
@@ -14,7 +15,8 @@ export const gamePacks = {
     hayorshim: hayorshimPack,
     avatar: avatarPack,
     kupa_rashit: kuparashitPack,
-    burekas_cult: burekascultPack
+    burekas_cult: burekascultPack,
+    worldcup: worldcupPack
 };
 
 // UI Text for multiple languages

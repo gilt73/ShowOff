@@ -101,12 +101,12 @@ function Home() {
                     </div>
                 </div>
 
-                {/* Debug Mode Button */}
+                {/* Test Mode Button */}
                 <div className="mt-8">
                     <Link to="/debug-selector">
                         <button className="w-64 text-xl h-16 bg-yellow-500 text-black font-black rounded-2xl border-b-4 border-yellow-700 hover:scale-105 hover:bg-yellow-400 transform transition duration-200 shadow-xl flex items-center justify-center gap-3 mx-auto">
                             <span className="text-2xl">🕵️</span>
-                            <span>Debug Mode</span>
+                            <span>Test Mode</span>
                         </button>
                     </Link>
                     <p className="text-white/40 text-sm mt-2 text-center">Test content without multiplayer</p>
@@ -125,7 +125,7 @@ function Home() {
                     <img src={`${import.meta.env.BASE_URL}assets/GT_Logo_New.png`} alt="G.T AI Games" className="h-8 w-auto" />
                     <span className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">G.T AI GAMES</span>
                 </a>
-                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.0</div>
+                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.1</div>
             </div>
         </div>
     );

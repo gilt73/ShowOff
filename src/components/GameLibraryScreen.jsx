@@ -194,7 +194,7 @@ export default function GameLibraryScreen() {
                     <img src={`${import.meta.env.BASE_URL}assets/GT_Logo_New.png`} alt="G.T AI Games" className="h-8 w-auto" />
                     <span className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">G.T AI GAMES</span>
                 </a>
-                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.0</div>
+                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.1</div>
             </div>
         </div>
     );

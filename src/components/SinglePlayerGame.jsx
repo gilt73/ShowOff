@@ -107,7 +107,7 @@ export default function SinglePlayerGame() {
     }
 
     return (
-        <div className="h-screen w-screen overflow-hidden flex flex-col bg-black text-white" dir={lang === 'he' ? 'rtl' : 'ltr'}>
+        <div className="min-h-screen w-screen flex flex-col bg-black text-white" dir={lang === 'he' ? 'rtl' : 'ltr'}>
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
                 <img src={currentPack.bgImage || `${import.meta.env.BASE_URL}assets/bg.png`} alt="Background" className="w-full h-full object-cover opacity-80" />
@@ -115,47 +115,47 @@ export default function SinglePlayerGame() {
             </div>
 
             {/* Debug Header */}
-            <div className="relative z-10 bg-yellow-500 text-black px-6 py-3 flex items-center justify-between shadow-lg border-b-4 border-yellow-600">
-                <div className="flex items-center gap-4">
-                    <span className="text-2xl">🕵️</span>
+            <div className="relative z-10 bg-yellow-500 text-black px-4 md:px-6 py-3 flex items-center justify-between shadow-lg border-b-4 border-yellow-600 flex-shrink-0">
+                <div className="flex items-center gap-2 md:gap-4">
+                    <span className="text-xl md:text-2xl">🕵️</span>
                     <div>
-                        <div className="font-black text-xl">DEBUG MODE</div>
-                        <div className="text-sm font-mono">{currentPack.title[lang]}</div>
+                        <div className="font-black text-base md:text-xl">TEST MODE</div>
+                        <div className="text-xs md:text-sm font-mono">{currentPack.title[lang]}</div>
                     </div>
-                    <div className={`px-3 py-1 rounded-full text-xs font-bold ${gameMode === 'penalty' ? 'bg-pink-600 text-white' : 'bg-blue-500 text-white'}`}>
+                    <div className={`px-2 md:px-3 py-1 rounded-full text-xs font-bold ${gameMode === 'penalty' ? 'bg-pink-600 text-white' : 'bg-blue-500 text-white'}`}>
                         {gameMode === 'penalty' ? '😈 ShowOff' : '🏆 Classic'}
                     </div>
                 </div>
-                <div className="flex items-center gap-4">
-                    <div className="font-bold text-lg">
+                <div className="flex items-center gap-2 md:gap-4">
+                    <div className="font-bold text-sm md:text-lg">
                         Question {currentQuestionIndex + 1} / {totalQuestions}
                     </div>
-                    <Link to="/debug-selector" className="bg-black text-yellow-500 px-4 py-2 rounded-lg font-bold hover:bg-gray-900 transition">
-                        ← Back
+                    <Link to="/debug-selector" className="bg-black text-yellow-500 px-3 md:px-4 py-2 rounded-lg font-bold hover:bg-gray-900 transition text-sm md:text-base">
+                        ←
                     </Link>
                 </div>
             </div>
 
-            {/* Content Area - Split View */}
-            <div className="relative z-10 flex-1 flex flex-col overflow-hidden">
+            {/* Content Area - Scrollable */}
+            <div className="relative z-10 flex-1 flex flex-col overflow-y-auto">
 
-                {/* TOP HALF: Host View (Question Display) */}
-                <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-b from-black/60 to-transparent border-b-2 border-white/20">
+                {/* TOP SECTION: Question Display */}
+                <div className="flex flex-col items-center justify-center p-4 md:p-8 bg-gradient-to-b from-black/60 to-transparent border-b-2 border-white/20 min-h-[30vh] md:min-h-0">
                     <div className="w-full max-w-4xl">
                         {/* Category */}
-                        <div className="text-showoff-accent font-bold tracking-widest mb-4 uppercase drop-shadow-lg text-center text-xl">
+                        <div className="text-showoff-accent font-bold tracking-widest mb-2 md:mb-4 uppercase drop-shadow-lg text-center text-base md:text-xl">
                             {getText(currentQ.category, lang)}
                         </div>
 
                         {/* Question */}
-                        <div className="card-glass p-8 text-center border-2 border-showoff-blue backdrop-blur-md bg-black/40 mb-6">
-                            <h2 className="text-3xl md:text-5xl font-bold leading-tight">
+                        <div className="card-glass p-4 md:p-8 text-center border-2 border-showoff-blue backdrop-blur-md bg-black/40 mb-3 md:mb-6">
+                            <h2 className="text-xl md:text-3xl lg:text-5xl font-bold leading-tight">
                                 {getText(currentQ.question, lang)}
                             </h2>
                         </div>
 
                         {/* Timer Bar */}
-                        <div className="w-full h-6 bg-gray-800 rounded-full overflow-hidden border border-gray-700 shadow-inner mb-4">
+                        <div className="w-full h-4 md:h-6 bg-gray-800 rounded-full overflow-hidden border border-gray-700 shadow-inner mb-2 md:mb-4">
                             <div
                                 className="h-full bg-gradient-to-r from-green-400 to-red-500 transition-all duration-1000 ease-linear"
                                 style={{ width: `${(timer / 10) * 100}%` }}
@@ -164,8 +164,8 @@ export default function SinglePlayerGame() {
                     </div>
                 </div>
 
-                {/* BOTTOM HALF: Player View (Answer Buttons) */}
-                <div className="flex-1 flex flex-col items-center justify-center p-8 bg-gradient-to-t from-black/60 to-transparent">
+                {/* BOTTOM SECTION: Answer Buttons */}
+                <div className="flex flex-col items-center justify-center p-4 md:p-8 bg-gradient-to-t from-black/60 to-transparent min-h-[50vh] md:min-h-0 pb-20 md:pb-8">
                     {!showResult ? (
                         <div className="w-full max-w-4xl">
                             <div className="text-center mb-6">
@@ -174,7 +174,7 @@ export default function SinglePlayerGame() {
                             </div>
 
                             {/* Answer Grid */}
-                            <div className="grid grid-cols-2 gap-4 md:gap-6">
+                            <div className="grid grid-cols-2 gap-3 md:gap-4 lg:gap-6">
                                 {getOptions(currentQ.options, lang).map((opt, idx) => {
                                     const labels = ['A', 'B', 'C', 'D'];
                                     const styles = [
@@ -188,12 +188,12 @@ export default function SinglePlayerGame() {
                                         <button
                                             key={idx}
                                             onClick={() => handleAnswer(idx)}
-                                            className={`btn-answer ${styles[idx]} relative group text-xl md:text-2xl`}
+                                            className={`btn-answer ${styles[idx]} relative group text-base md:text-xl lg:text-2xl min-h-[80px] md:min-h-[100px]`}
                                         >
-                                            <span className="absolute top-2 left-2 text-sm font-black opacity-70">
+                                            <span className="absolute top-1 left-1 md:top-2 md:left-2 text-xs md:text-sm font-black opacity-70">
                                                 {labels[idx]}
                                             </span>
-                                            <span className="text-center">{opt}</span>
+                                            <span className="text-center px-2">{opt}</span>
                                         </button>
                                     );
                                 })}
@@ -203,7 +203,7 @@ export default function SinglePlayerGame() {
                         <div className="w-full max-w-2xl">
                             {/* Result Display */}
                             <div className={`
-                                card-glass p-8 text-center backdrop-blur-md border-4
+                                card-glass p-4 md:p-8 text-center backdrop-blur-md border-4
                                 ${isCorrect
                                     ? 'bg-gradient-to-br from-green-500/20 to-emerald-900/40 border-green-500/50'
                                     : 'bg-gradient-to-br from-red-500/20 to-rose-900/40 border-red-500/50'
@@ -238,6 +238,16 @@ export default function SinglePlayerGame() {
                                     <div className="mt-6 text-white/50 text-sm animate-pulse">
                                         {t('autoAdvancing')}
                                     </div>
+                                )}
+
+                                {/* Show manual Next button when punishment is displayed */}
+                                {currentPunishment && !isCorrect && (
+                                    <button
+                                        onClick={nextQuestion}
+                                        className="mt-6 w-full bg-showoff-accent hover:bg-pink-500 text-black font-black text-2xl py-4 px-8 rounded-xl shadow-lg hover:scale-105 transform transition duration-200 border-b-4 border-pink-700"
+                                    >
+                                        ➡️ {lang === 'he' ? 'המשך' : 'Next'}
+                                    </button>
                                 )}
                             </div>
                         </div>
