@@ -481,7 +481,7 @@ export const burekascultPack = {
     metadata: {
         themeColor: "#FF6B35",
         icon: "🎬",
-        bgImage: "/assets/burekas_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/burekas_bg.png`
     },
     questions: burekascultQuestions,
     punishments: burekascultPunishments,

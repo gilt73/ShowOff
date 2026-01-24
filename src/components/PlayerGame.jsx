@@ -255,7 +255,7 @@ export default function PlayerGame() {
                 <div className="absolute inset-0 bg-showoff-bg" />
                 <div className="absolute top-0 left-0 w-full h-1/2 bg-purple-900/20 blur-3xl rounded-full transform -translate-y-1/2" />
                 <div className="absolute bottom-0 right-0 w-full h-1/2 bg-blue-900/20 blur-3xl rounded-full transform translate-y-1/2" />
-                <img src="/assets/bg.png" alt="" className="absolute inset-0 w-full h-full object-cover opacity-5 mix-blend-overlay" />
+                <img src={`${import.meta.env.BASE_URL}assets/bg.png`} alt="" className="absolute inset-0 w-full h-full object-cover opacity-5 mix-blend-overlay" />
             </div>
 
             <div className="relative z-10 flex-1 flex flex-col p-6">

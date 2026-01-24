@@ -110,7 +110,7 @@ export default function SinglePlayerGame() {
         <div className="h-screen w-screen overflow-hidden flex flex-col bg-black text-white" dir={lang === 'he' ? 'rtl' : 'ltr'}>
             {/* Background Effects */}
             <div className="absolute inset-0 z-0">
-                <img src={currentPack.bgImage || "/assets/bg.png"} alt="Background" className="w-full h-full object-cover opacity-80" />
+                <img src={currentPack.bgImage || `${import.meta.env.BASE_URL}assets/bg.png`} alt="Background" className="w-full h-full object-cover opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/60 to-black/80" />
             </div>
 

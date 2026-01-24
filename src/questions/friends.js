@@ -438,7 +438,7 @@ export const friendsPack = {
     metadata: {
         themeColor: "#9B59B6",
         icon: "☕",
-        bgImage: "/assets/friends_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/friends_bg.png`
     },
     questions: friendsQuestions,
     punishments: friendsPunishments,

@@ -438,7 +438,7 @@ export const hayorshimPack = {
     metadata: {
         themeColor: "#8E44AD",
         icon: "👑",
-        bgImage: "/assets/hayorshim_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/hayorshim_bg.png`
     },
     questions: hayorshimQuestions,
     punishments: hayorshimPunishments,

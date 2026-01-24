@@ -858,7 +858,7 @@ export const avatarPack = {
     metadata: {
         themeColor: "#4A90E2",
         icon: "🔥",
-        bgImage: "/assets/avatar_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/avatar_bg.png`
     },
     questions: avatarQuestions,
     punishments: avatarPunishments,

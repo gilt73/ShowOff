@@ -55,7 +55,7 @@ export const homeAlonePack = {
     metadata: {
         themeColor: "#C41E3A",
         icon: "🏠",
-        bgImage: "/assets/homealone_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/homealone_bg.png`
     },
     questions: homeAloneQuestions,
     punishments: homeAlonePunishments,

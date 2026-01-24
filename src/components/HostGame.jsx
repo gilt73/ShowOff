@@ -306,7 +306,7 @@ export default function HostGame() {
 
             {/* Background Image */}
             <div className="absolute inset-0 z-0">
-                <img src={currentPack.bgImage || "/assets/bg.png"} alt="Background" className="w-full h-full object-cover opacity-80" />
+                <img src={currentPack.bgImage || `${import.meta.env.BASE_URL}assets/bg.png`} alt="Background" className="w-full h-full object-cover opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/60 to-black/80" />
             </div>
 
@@ -658,7 +658,7 @@ export default function HostGame() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 bg-black/40 px-6 py-2 rounded-full border border-white/10 backdrop-blur-md hover:bg-black/60 transition-all cursor-pointer"
                 >
-                    <img src="/assets/GT_Logo_New.png" alt="G.T AI Games" className="h-6 w-auto" />
+                    <img src={`${import.meta.env.BASE_URL}assets/GT_Logo_New.png`} alt="G.T AI Games" className="h-6 w-auto" />
                     <span className="font-bold text-sm text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">POWERED BY G.T AI GAMES</span>
                 </a>
                 <div className="text-xs text-white/40 mt-2 font-mono">v2.0.0</div>

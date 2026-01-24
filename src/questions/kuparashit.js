@@ -438,7 +438,7 @@ export const kuparashitPack = {
     metadata: {
         themeColor: "#FF6B35",
         icon: "🛒",
-        bgImage: "/assets/kuparashit_bg.png"
+        bgImage: `${import.meta.env.BASE_URL}assets/kuparashit_bg.png`
     },
     questions: kuparashitQuestions,
     punishments: kuparashitPunishments,

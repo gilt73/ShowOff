@@ -26,7 +26,7 @@ export default function GameLibraryScreen() {
         <div className="min-h-screen flex flex-col items-center p-4 relative overflow-y-auto text-white">
             {/* Background */}
             <div className="absolute inset-0 z-0">
-                <img src="/assets/bg.png" alt="Background" className="w-full h-full object-cover opacity-80" />
+                <img src={`${import.meta.env.BASE_URL}assets/bg.png`} alt="Background" className="w-full h-full object-cover opacity-80" />
                 <div className="absolute inset-0 bg-gradient-to-br from-black/80 via-purple-900/60 to-black/80" />
             </div>
 
@@ -102,7 +102,7 @@ export default function GameLibraryScreen() {
                             {/* Background Image */}
                             <div className="absolute inset-0 z-0">
                                 <img
-                                    src={pack.metadata?.bgImage || pack.bgImage || '/assets/bg.png'}
+                                    src={pack.metadata?.bgImage || pack.bgImage || `${import.meta.env.BASE_URL}assets/bg.png`}
                                     alt={pack.title[lang]}
                                     className="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-110 transition-all duration-500"
                                 />
@@ -191,7 +191,7 @@ export default function GameLibraryScreen() {
                     rel="noopener noreferrer"
                     className="flex items-center gap-3 bg-black/40 px-6 py-2 rounded-full border border-white/10 backdrop-blur-md hover:bg-black/60 transition-all cursor-pointer"
                 >
-                    <img src="/assets/GT_Logo_New.png" alt="G.T AI Games" className="h-8 w-auto" />
+                    <img src={`${import.meta.env.BASE_URL}assets/GT_Logo_New.png`} alt="G.T AI Games" className="h-8 w-auto" />
                     <span className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">G.T AI GAMES</span>
                 </a>
                 <div className="text-xs text-white/40 mt-2 font-mono">v2.0.0</div>
