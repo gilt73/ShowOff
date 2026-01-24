@@ -6,7 +6,7 @@ import { friendsPack } from './friends';
 import { hayorshimPack } from './hayorshim';
 import { avatarPack } from './avatar';
 import { kuparashitPack } from './kuparashit';
-import { homeAlonePack } from './homealone';
+import { burekascultPack } from './burekascult';
 
 // All available game packs
 export const gamePacks = {
@@ -14,7 +14,7 @@ export const gamePacks = {
     hayorshim: hayorshimPack,
     avatar: avatarPack,
     kupa_rashit: kuparashitPack,
-    home_alone: homeAlonePack
+    burekas_cult: burekascultPack
 };
 
 // UI Text for multiple languages
@@ -95,10 +95,11 @@ export function selectDifficultyBasedQuestions(gamePack) {
         return shuffleArray(gamePack.questions);
     }
 
-    // Separate questions by difficulty
-    const easy = gamePack.questions.filter(q => q.difficulty === 1);
-    const medium = gamePack.questions.filter(q => q.difficulty === 2);
-    const hard = gamePack.questions.filter(q => q.difficulty === 3);
+    // Separate questions by difficulty (supports both 3-tier and 5-tier systems)
+    // Easy: difficulty 1-2, Medium: difficulty 3-4, Hard: difficulty 5+
+    const easy = gamePack.questions.filter(q => q.difficulty >= 1 && q.difficulty <= 2);
+    const medium = gamePack.questions.filter(q => q.difficulty >= 3 && q.difficulty <= 4);
+    const hard = gamePack.questions.filter(q => q.difficulty >= 5);
 
     // Select 5 from each tier (or as many as available)
     const selectedEasy = shuffleArray(easy).slice(0, Math.min(5, easy.length));
