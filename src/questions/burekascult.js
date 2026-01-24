@@ -10,32 +10,32 @@ export const burekascultQuestions = [
     {
         category: "גבעת חלפון",
         question: "השלם את הציטוט המפורסם: 'לסרג'יו פנית – בודדת לא___'",
-        options: ["טעית", "הצלחת", "ידעת", "הבנת"],
-        correctIndex: 0,
+        options: ["הצלחת", "טעית", "ידעת", "הבנת"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "גבעת חלפון",
         question: "מה הטיפול שסרג'יו מציע לויקטור ל'זפטה שמש'?",
-        options: ["אמבטיה חול", "עיסוי", "מנוחה", "תרופות"],
-        correctIndex: 0,
+        options: ["מנוחה", "עיסוי", "אמבטיה חול", "תרופות"],
+        correctIndex: 2,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "גבעת חלפון",
         question: "השלם: 'לכל פקק יש בקבוק, ולכל דלי יש...'",
-        options: ["סמרטוט", "מים", "ידית", "חור"],
-        correctIndex: 0,
+        options: ["מים", "סמרטוט", "ידית", "חור"],
+        correctIndex: 1,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "גבעת חלפון",
         question: "מה סרג'יו אמר על בולגרים?",
-        options: ["אני לא סובל בולגרים", "בולגרים טובים", "אני אוהב בולגרים", "בולגרים חזקים"],
-        correctIndex: 0,
+        options: ["בולגרים חזקים", "בולגרים טובים", "אני אוהב בולגרים", "אני לא סובל בולגרים"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
@@ -44,8 +44,8 @@ export const burekascultQuestions = [
     {
         category: "חגיגה בסנוקר",
         question: "השלם: 'הצ'קים שלנו אף פעם לא...'",
-        options: ["חוזרים", "נגמרים", "מגיעים", "נפדים"],
-        correctIndex: 0,
+        options: ["מגיעים", "נגמרים", "חוזרים", "נפדים"],
+        correctIndex: 2,
         difficulty: 1,
         timeLimit: 20
     },
@@ -60,8 +60,8 @@ export const burekascultQuestions = [
     {
         category: "חגיגה בסנוקר",
         question: "מה חנוכה רצה לקרוא ליד חנות הירקות?",
-        options: ["תהילים", "תפילה", "תורה", "זמירות"],
-        correctIndex: 0,
+        options: ["תורה", "תפילה", "תהילים", "זמירות"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
@@ -70,16 +70,16 @@ export const burekascultQuestions = [
     {
         category: "צ'ארלי וחצי",
         question: "השלם: 'יין ישמח לבב אנוש... ואישה כמו___'",
-        options: ["חור בראש", "מתנה", "ברכה", "אושר"],
-        correctIndex: 0,
+        options: ["ברכה", "מתנה", "חור בראש", "אושר"],
+        correctIndex: 2,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "צ'ארלי וחצי",
         question: "השלם: 'מי מתעסק? זה___!'",
-        options: ["מיקו", "דודו", "מומו", "ציקו"],
-        correctIndex: 0,
+        options: ["ציקו", "דודו", "מומו", "מיקו"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
@@ -104,16 +104,16 @@ export const burekascultQuestions = [
     {
         category: "אסקימו לימון",
         question: "איך סטלה קוראת ליודלה?",
-        options: ["שטרודל שלי", "מתוק שלי", "חמוד שלי", "יפה שלי"],
-        correctIndex: 0,
+        options: ["מתוק שלי", "שטרודל שלי", "חמוד שלי", "יפה שלי"],
+        correctIndex: 1,
         difficulty: 2,
         timeLimit: 20
     },
     {
         category: "אסקימו לימון",
         question: "מה השיר בסצנת הסיום העצובה?",
-        options: ["Mr. Lonely", "Yesterday", "Hello", "Help"],
-        correctIndex: 0,
+        options: ["Help", "Yesterday", "Hello", "Mr. Lonely"],
+        correctIndex: 3,
         difficulty: 2,
         timeLimit: 20
     },
@@ -122,16 +122,16 @@ export const burekascultQuestions = [
     {
         category: "מבצע סבתא",
         question: "השלם את הציטוט: 'סבתא חיה___!'",
-        options: ["מתה", "חולה", "ישנה", "בריאה"],
-        correctIndex: 0,
+        options: ["חולה", "מתה", "ישנה", "בריאה"],
+        correctIndex: 1,
         difficulty: 1,
         timeLimit: 20
     },
     {
         category: "מבצע סבתא",
         question: "מה בני שגיב מבקש לתקן את המקרר?",
-        options: ["בקבוק ספרייט ומספריים", "פטיש ומברג", "מברג ודבק", "חוט וסרט"],
-        correctIndex: 0,
+        options: ["פטיש ומברג", "בקבוק ספרייט ומספריים", "מברג ודבק", "חוט וסרט"],
+        correctIndex: 1,
         difficulty: 2,
         timeLimit: 20
     },
@@ -166,8 +166,8 @@ export const burekascultQuestions = [
     {
         category: "אסקימו לימון - ספיחס",
         question: "מה שמש הבטיח שקיטבג יאכל?",
-        options: ["הרבה הרבה חצץ", "פלפל חריף", "חול", "אבנים"],
-        correctIndex: 0,
+        options: ["חול", "פלפל חריף", "הרבה הרבה חצץ", "אבנים"],
+        correctIndex: 2,
         difficulty: 2,
         timeLimit: 20
     },
@@ -176,8 +176,8 @@ export const burekascultQuestions = [
     {
         category: "גבעת חלפון",
         question: "מה שם הבסיס בסרט?",
-        options: ["גבעת חלפון", "בסיס דרום", "בסיס צפון", "בסיס מרכז"],
-        correctIndex: 0,
+        options: ["בסיס מרכז", "בסיס דרום", "בסיס צפון", "גבעת חלפון"],
+        correctIndex: 3,
         difficulty: 1,
         timeLimit: 20
     },
@@ -188,32 +188,32 @@ export const burekascultQuestions = [
     {
         category: "גבעת חלפון",
         question: "מה ויקטור חסון אמר כשחיפש את הים?",
-        options: ["שעה שאני מחפש את הים, לא יכול לשים שלט קטן 'ים'?", "איפה הים פה?", "אני צמא למים", "איפה הים הקרוב?"],
-        correctIndex: 0,
+        options: ["איפה הים פה?", "שעה שאני מחפש את הים, לא יכול לשים שלט קטן 'ים'?", "אני צמא למים", "איפה הים הקרוב?"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "גבעת חלפון",
         question: "מה סרג'יו אמר שצריך לרשום במקום בולגרים?",
-        options: ["ג'ינג'י עם מפתח שוודי", "רומנים בלבד", "טורקים רק", "איטלקים טובים"],
-        correctIndex: 0,
+        options: ["טורקים רק", "רומנים בלבד", "ג'ינג'י עם מפתח שוודי", "איטלקים טובים"],
+        correctIndex: 2,
         difficulty: 4,
         timeLimit: 25
     },
     {
         category: "גבעת חלפון",
         question: "מי ניסה להסתיר תותח מהביקורת?",
-        options: ["החיילים של סרג'יו", "ניקו הטבח", "גשש חיה", "כל הבסיס"],
-        correctIndex: 0,
+        options: ["גשש חיה", "ניקו הטבח", "החיילים של סרג'יו", "כל הבסיס"],
+        correctIndex: 2,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "גבעת חלפון",
         question: "מה גשש איבגי עשה בבסיס?",
-        options: ["שמר על הבסיס", "בישל", "דיבר ברדיו", "ניקה"],
-        correctIndex: 0,
+        options: ["ניקה", "בישל", "דיבר ברדיו", "שמר על הבסיס"],
+        correctIndex: 3,
         difficulty: 3,
         timeLimit: 25
     },
@@ -222,32 +222,32 @@ export const burekascultQuestions = [
     {
         category: "חגיגה בסנוקר",
         question: "למי שייכת מזוודת המקלות שאף אחד לא נוגע בה?",
-        options: ["לדוד סלבדור", "לחנוכה", "לסבא", "לאבא"],
-        correctIndex: 0,
+        options: ["לחנוכה", "לדוד סלבדור", "לסבא", "לאבא"],
+        correctIndex: 1,
         difficulty: 4,
         timeLimit: 25
     },
     {
         category: "חגיגה בסנוקר",
         question: "מה חנוכה הציע למוכר הירקות?",
-        options: ["קח כמה מנדרינות על חשבוני ולך לטייל", "תן לי הנחה", "בוא נשחק קלפים", "מכור לי בזול"],
-        correctIndex: 0,
+        options: ["מכור לי בזול", "תן לי הנחה", "בוא נשחק קלפים", "קח כמה מנדרינות על חשבוני ולך לטייל"],
+        correctIndex: 3,
         difficulty: 4,
         timeLimit: 25
     },
     {
         category: "חגיגה בסנוקר",
         question: "איפה המוכר אמר לחנוכה לקרוא תהילים?",
-        options: ["תהילים תקרא בבית", "תהילים בבית כנסת", "תלך לבית", "לך הביתה"],
-        correctIndex: 0,
+        options: ["תלך לבית", "תהילים בבית כנסת", "תהילים תקרא בבית", "לך הביתה"],
+        correctIndex: 2,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "חגיגה בסנוקר",
         question: "מי כיכב בתפקיד הראשי?",
-        options: ["יהורם גאון", "משה איבגי", "שייקה לוי", "גידי גוב"],
-        correctIndex: 0,
+        options: ["משה איבגי", "יהורם גאון", "שייקה לוי", "גידי גוב"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
@@ -256,8 +256,8 @@ export const burekascultQuestions = [
     {
         category: "צ'ארלי וחצי",
         question: "מה ששון (צ'ארלי) אמר על מיקו בתאונה המבוימת?",
-        options: ["הוא פצוע קשה, לא יודעים מה יש לו", "הוא בסדר גמור", "זה לא רציני", "הוא רק מדמם"],
-        correctIndex: 0,
+        options: ["זה לא רציני", "הוא בסדר גמור", "הוא פצוע קשה, לא יודעים מה יש לו", "הוא רק מדמם"],
+        correctIndex: 2,
         difficulty: 4,
         timeLimit: 25
     },
@@ -272,16 +272,16 @@ export const burekascultQuestions = [
     {
         category: "צ'ארלי וחצי",
         question: "למי צ'ארלי שייך?",
-        options: ["לילד בשם ששון", "לזקן", "למשפחה עשירה", "לאיש עסקים"],
-        correctIndex: 0,
+        options: ["למשפחה עשירה", "לזקן", "לילד בשם ששון", "לאיש עסקים"],
+        correctIndex: 2,
         difficulty: 3,
         timeLimit: 25
     },
     {
         category: "צ'ארלי וחצי",
         question: "מי אמר את הציטוט 'יין ישמח לבב אנוש'?",
-        options: ["זאכי (אריה אליאס)", "ששון", "מיקו", "האבא"],
-        correctIndex: 0,
+        options: ["האבא", "ששון", "מיקו", "זאכי (אריה אליאס)"],
+        correctIndex: 3,
         difficulty: 4,
         timeLimit: 25
     },
@@ -290,24 +290,24 @@ export const burekascultQuestions = [
     {
         category: "מבצע סבתא",
         question: "מה קרמבו אמר לקלאודיו באנגלית?",
-        options: ["You want to come to my room? a cup of coffee... fuck of tea?", "Hello my friend", "Come here please", "I love you"],
-        correctIndex: 0,
+        options: ["Come here please", "Hello my friend", "You want to come to my room? a cup of coffee... fuck of tea?", "I love you"],
+        correctIndex: 2,
         difficulty: 4,
         timeLimit: 25
     },
     {
         category: "מבצע סבתא",
         question: "לפי דבורה, איפה היא שמה את סבתא?",
-        options: ["זרקת אותה לבית אבות ועכשיו הכל על הזין שלך", "שמת אותה במלון", "לקחת אותה לטיול", "הסתרת אותה בבית"],
-        correctIndex: 0,
+        options: ["שמת אותה במלון", "זרקת אותה לבית אבות ועכשיו הכל על הזין שלך", "לקחת אותה לטיול", "הסתרת אותה בבית"],
+        correctIndex: 1,
         difficulty: 4,
         timeLimit: 25
     },
     {
         category: "מבצע סבתא",
         question: "מה קרמבו ניסה למכור?",
-        options: ["קרמבו", "פלאפל", "שווארמה", "בורקס"],
-        correctIndex: 0,
+        options: ["פלאפל", "קרמבו", "שווארמה", "בורקס"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
@@ -316,8 +316,8 @@ export const burekascultQuestions = [
     {
         category: "אלכס חולה אהבה",
         question: "מה אלכס צעק לפארוק?",
-        options: ["פארוק, תסגור את התריס, אנחנו ליד השולחן!", "פארוק תעזור לי", "פארוק בוא הנה", "פארוק תביא מים"],
-        correctIndex: 0,
+        options: ["פארוק תעזור לי", "פארוק, תסגור את התריס, אנחנו ליד השולחן!", "פארוק בוא הנה", "פארוק תביא מים"],
+        correctIndex: 1,
         difficulty: 4,
         timeLimit: 25
     },
@@ -332,8 +332,8 @@ export const burekascultQuestions = [
     {
         category: "אלכס חולה אהבה",
         question: "במה אלכס עובד?",
-        options: ["מוניות", "אוטובוסים", "משלוחים", "מסעדה"],
-        correctIndex: 0,
+        options: ["אוטובוסים", "מוניות", "משלוחים", "מסעדה"],
+        correctIndex: 1,
         difficulty: 3,
         timeLimit: 25
     },
@@ -362,16 +362,16 @@ export const burekascultQuestions = [
     {
         category: "גבעת חלפון",
         question: "באיזו שנה יצא הסרט לאקרנים?",
-        options: ["1977", "1976", "1978", "1975"],
-        correctIndex: 0,
+        options: ["1976", "1977", "1978", "1975"],
+        correctIndex: 1,
         difficulty: 5,
         timeLimit: 30
     },
     {
         category: "גבעת חלפון",
         question: "מי ביים את הסרט?",
-        options: ["אסי דיין", "אפרם קישון", "בועז דוידסון", "דני וולמן"],
-        correctIndex: 0,
+        options: ["דני וולמן", "אפרם קישון", "בועז דוידסון", "אסי דיין"],
+        correctIndex: 3,
         difficulty: 5,
         timeLimit: 30
     },
@@ -380,16 +380,16 @@ export const burekascultQuestions = [
     {
         category: "מבצע סבתא",
         question: "מה מספר המקרר שבני שגיב מתקן?",
-        options: ["8-א", "7-ב", "9-ג", "6-א"],
-        correctIndex: 0,
+        options: ["7-ב", "8-א", "9-ג", "6-א"],
+        correctIndex: 1,
         difficulty: 5,
         timeLimit: 30
     },
     {
         category: "מבצע סבתא",
         question: "מי שיחק את תפקיד זינגר?",
-        options: ["יוסף שילוח", "משה איבגי", "יהורם גאון", "דובלה גליקמן"],
-        correctIndex: 0,
+        options: ["דובלה גליקמן", "משה איבגי", "יהורם גאון", "יוסף שילוח"],
+        correctIndex: 3,
         difficulty: 5,
         timeLimit: 30
     },
@@ -398,16 +398,16 @@ export const burekascultQuestions = [
     {
         category: "אלכס חולה אהבה",
         question: "כמה נשיקות (עם לשון) יאנוש נתן ללולה?",
-        options: ["11", "10", "12", "9"],
-        correctIndex: 0,
+        options: ["12", "10", "11", "9"],
+        correctIndex: 2,
         difficulty: 5,
         timeLimit: 30
     },
     {
         category: "אלכס חולה אהבה",
         question: "מי כיכב בתפקיד הראשי של אלכס?",
-        options: ["ידידיה ויטאל", "יוסי בנאי", "ירון לונדון", "דודו טופז"],
-        correctIndex: 0,
+        options: ["יוסי בנאי", "ידידיה ויטאל", "ירון לונדון", "דודו טופז"],
+        correctIndex: 1,
         difficulty: 5,
         timeLimit: 30
     },
@@ -416,16 +416,16 @@ export const burekascultQuestions = [
     {
         category: "אסקימו לימון",
         question: "כמה סרטים יש בסדרת אסקימו לימון?",
-        options: ["8", "7", "9", "6"],
-        correctIndex: 0,
+        options: ["7", "8", "9", "6"],
+        correctIndex: 1,
         difficulty: 5,
         timeLimit: 30
     },
     {
         category: "אסקימו לימון",
         question: "מי ביים את הסרט הראשון?",
-        options: ["בועז דוידסון", "צביקה פיק", "דודו טופז", "אפרים קישון"],
-        correctIndex: 0,
+        options: ["צביקה פיק", "בועז דוידסון", "דודו טופז", "אפרים קישון"],
+        correctIndex: 1,
         difficulty: 5,
         timeLimit: 30
     },
