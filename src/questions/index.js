@@ -8,6 +8,7 @@ import { avatarPack } from './avatar';
 import { kuparashitPack } from './kuparashit';
 import { burekascultPack } from './burekascult';
 import { worldcupPack } from './worldcup';
+import { noamPack } from './noam';
 
 // All available game packs
 export const gamePacks = {
@@ -16,7 +17,8 @@ export const gamePacks = {
     avatar: avatarPack,
     kupa_rashit: kuparashitPack,
     burekas_cult: burekascultPack,
-    worldcup: worldcupPack
+    worldcup: worldcupPack,
+    noam: noamPack
 };
 
 // UI Text for multiple languages

@@ -402,7 +402,7 @@ export default function HostGame() {
                                 )}
                             </div>
 
-                            {Object.keys(players).length > 0 ? (
+                            {(Object.keys(players).length > 0 || (isHostPlaying && hostNickname.trim())) ? (
                                 <button onClick={startHostGame} className={`btn-primary shadow-xl ${buttonSize}`}>
                                     {t('start')}
                                 </button>

@@ -12,10 +12,54 @@ function Home() {
     const [lang, setLang] = useState('he');
     const [selectedPack, setSelectedPack] = useState('friends');
     const [gameMode, setGameMode] = useState('penalty'); // 'penalty' or 'classic'
+
+    // Password protection states
+    const [showPasswordModal, setShowPasswordModal] = useState(false);
+    const [passwordInput, setPasswordInput] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [pendingPackId, setPendingPackId] = useState(null);
+
     const navigate = useNavigate();
 
     // Helper to get text based on current language
     const t = (key) => uiText[lang][key];
+
+    const handleQuickPlay = (packId) => {
+        // Check if this is a protected game
+        if (packId === 'noam') {
+            setPendingPackId(packId);
+            setShowPasswordModal(true);
+            setPasswordInput('');
+            setPasswordError('');
+            return;
+        }
+
+        // Not protected, navigate directly
+        navigate(`/host?pack=${packId}&lang=${lang}&mode=${gameMode}`);
+    };
+
+    const handlePasswordSubmit = (e) => {
+        e.preventDefault();
+
+        if (passwordInput === '1818') {
+            // Correct password
+            setShowPasswordModal(false);
+            navigate(`/host?pack=${pendingPackId}&lang=${lang}&mode=${gameMode}`);
+            setPasswordInput('');
+            setPasswordError('');
+            setPendingPackId(null);
+        } else {
+            // Wrong password
+            setPasswordError(lang === 'he' ? 'סיסמה שגויה!' : 'Incorrect password!');
+        }
+    };
+
+    const handlePasswordCancel = () => {
+        setShowPasswordModal(false);
+        setPasswordInput('');
+        setPasswordError('');
+        setPendingPackId(null);
+    };
 
     return (
         <div className="min-h-screen flex flex-col items-center p-4 relative overflow-y-auto text-white">
@@ -83,9 +127,9 @@ function Home() {
                         <div className="relative w-full overflow-hidden">
                             <div className="flex gap-4 overflow-x-auto snap-x snap-mandatory py-4 px-4 scrollbar-hide justify-start items-center">
                                 {Object.values(gamePacks).map((pack) => (
-                                    <Link
+                                    <div
                                         key={pack.id}
-                                        to={`/host?pack=${pack.id}&lang=${lang}&mode=${gameMode}`}
+                                        onClick={() => handleQuickPlay(pack.id)}
                                         className="flex-shrink-0 snap-center cursor-pointer transition-all duration-300 w-28 h-28 rounded-full bg-cover bg-center border-4 border-white/20 hover:border-showoff-accent hover:scale-110"
                                         style={{ backgroundImage: `url(${pack.metadata?.bgImage || pack.bgImage})` }}
                                     >
@@ -94,7 +138,7 @@ function Home() {
                                                 {pack.title[lang]}
                                             </h3>
                                         </div>
-                                    </Link>
+                                    </div>
                                 ))}
                             </div>
                         </div>
@@ -125,8 +169,75 @@ function Home() {
                     <img src={`${import.meta.env.BASE_URL}assets/GT_Logo_New.png`} alt="G.T AI Games" className="h-8 w-auto" />
                     <span className="font-bold text-lg text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">G.T AI GAMES</span>
                 </a>
-                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.1</div>
+                <div className="text-xs text-white/40 mt-2 font-mono">v2.0.2</div>
             </div>
+
+            {/* Password Modal */}
+            {showPasswordModal && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+                    {/* Backdrop */}
+                    <div
+                        className="absolute inset-0 bg-black/80 backdrop-blur-md"
+                        onClick={handlePasswordCancel}
+                    />
+
+                    {/* Modal */}
+                    <div className="relative bg-gradient-to-br from-gray-900 to-black border-2 border-[#00FF88] rounded-3xl shadow-2xl shadow-[#00FF88]/20 p-8 max-w-md w-full animate-fade-in-up">
+                        {/* Icon */}
+                        <div className="text-center mb-6">
+                            <div className="text-6xl mb-4 animate-bounce-slow">🔒</div>
+                            <h2 className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-r from-[#00FF88] to-green-400 mb-2">
+                                {lang === 'he' ? 'משחק מוגן' : 'Protected Game'}
+                            </h2>
+                            <p className="text-white/60 text-sm">
+                                {lang === 'he' ? 'הזן סיסמה כדי להמשיך' : 'Enter password to continue'}
+                            </p>
+                        </div>
+
+                        {/* Password Form */}
+                        <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                            <div>
+                                <input
+                                    type="password"
+                                    value={passwordInput}
+                                    onChange={(e) => {
+                                        setPasswordInput(e.target.value);
+                                        setPasswordError('');
+                                    }}
+                                    placeholder={lang === 'he' ? 'סיסמה...' : 'Password...'}
+                                    className="w-full bg-black/60 border-2 border-white/20 focus:border-[#00FF88] rounded-xl px-4 py-3 text-white placeholder-white/40 focus:outline-none transition-all text-lg text-center font-mono"
+                                    autoFocus
+                                    dir="ltr"
+                                />
+                            </div>
+
+                            {/* Error Message */}
+                            {passwordError && (
+                                <div className="bg-red-500/20 border border-red-500 rounded-xl px-4 py-2 text-red-400 text-center animate-shake">
+                                    ⚠️ {passwordError}
+                                </div>
+                            )}
+
+                            {/* Buttons */}
+                            <div className="flex gap-3">
+                                <button
+                                    type="button"
+                                    onClick={handlePasswordCancel}
+                                    className="flex-1 bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold py-3 rounded-xl transition-all"
+                                >
+                                    {lang === 'he' ? 'ביטול' : 'Cancel'}
+                                </button>
+                                <button
+                                    type="submit"
+                                    className="flex-1 bg-gradient-to-r from-[#00FF88] to-green-500 hover:from-[#00FF88] hover:to-green-400 text-black font-black py-3 rounded-xl shadow-lg hover:shadow-[#00FF88]/50 transition-all transform hover:scale-105"
+                                >
+                                    {lang === 'he' ? 'אישור' : 'Submit'} ✓
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            )}
         </div>
     );
 }
